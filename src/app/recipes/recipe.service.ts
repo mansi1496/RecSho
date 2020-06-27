@@ -1,46 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Store } from '@ngrx/store';
 
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
-import { ShoppingListService } from '../shopping-list/shopping-list.service';
+import * as ShoppingListActions from '../shopping-list/store/shopping-list.actions';
+import * as fromApp from '../store/app.reducer';
 
 @Injectable()
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
 
-  // private recipes : Recipe[] = [
-  //   new Recipe('Chocolate Pie',
-  //   'What it contains?',
-  //   'https://storage.needpix.com/rsynced_images/cake-1971552_1280.jpg',
-  //   [
-  //       new Ingredient('milk', 1),
-  //       new Ingredient('chocolate', 1)
-  //   ]
+  // private recipes: Recipe[] = [
+  //   new Recipe(
+  //     'Tasty Schnitzel',
+  //     'A super-tasty Schnitzel - just awesome!',
+  //     'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+  //     [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
   //   ),
-  //   new Recipe('Vanilla Pie',
-  //   'What it contains?',
-  //   'https://s3-eu-west-1.amazonaws.com/cdn.nordic-wewalka/styles/recipe_banner/s3/ww-blaetterteigpasteten_2905.jpg?itok=_vQ1eOCv',
-  //   [
-  //       new Ingredient('milk', 1),
-  //       new Ingredient('vanilla esence', 1),
-  //       new Ingredient('white chocolate',1)
-  //   ]
-  //   ),
-  //   new Recipe('Cocolate Vanilla Tart',
-  //   'What it contains?',
-  //   'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9t-wAuTjEDgfpIiao6ilVK0Ys5xiL3A0AhI456au-Rrs6Y4OD&usqp=CAU',
-  //   [
-  //       new Ingredient('milk', 1),
-  //       new Ingredient('chocolate', 1),
-  //       new Ingredient('vanilla cream', 1),
-  //       new Ingredient('flour', 1)
-  //   ]
+  //   new Recipe(
+  //     'Big Fat Burger',
+  //     'What else you need to say?',
+  //     'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+  //     [new Ingredient('Buns', 2), new Ingredient('Meat', 1)]
   //   )
   // ];
   private recipes: Recipe[] = [];
 
-  constructor(private slService: ShoppingListService) {}
+  constructor(
+    private store: Store<fromApp.AppState>
+  ) {}
 
   setRecipes(recipes: Recipe[]) {
     this.recipes = recipes;
@@ -56,7 +45,8 @@ export class RecipeService {
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
-    this.slService.addIngredients(ingredients);
+    // this.slService.addIngredients(ingredients);
+    this.store.dispatch(new ShoppingListActions.AddIngredients(ingredients));
   }
 
   addRecipe(recipe: Recipe) {

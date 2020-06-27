@@ -1,86 +1,97 @@
-import { Component, OnInit, ComponentFactoryResolver, ViewChild, OnDestroy } from '@angular/core';
+import {
+  Component,
+  ComponentFactoryResolver,
+  ViewChild,
+  OnDestroy
+} from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { AuthService, AuthResponseData } from './auth.service';
-import { Observable, Subscription } from 'rxjs';
 import { Router } from '@angular/router';
-import { AlertComponent } from '../shared/alert/alert.component';
-import { AppComponent } from '../app.component';
-import { PlaceholderDirective } from '../shared/placeholder/placeholder.directive';
+import { Observable, Subscription } from 'rxjs';
 
+import { AuthService, AuthResponseData } from './auth.service';
+import { AlertComponent } from '../shared/alert/alert.component';
+import { PlaceholderDirective } from '../shared/placeholder/placeholder.directive';
 
 @Component({
   selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  templateUrl: './auth.component.html'
 })
-export class AuthComponent implements OnInit,OnDestroy {
-
+export class AuthComponent implements OnDestroy {
   isLoginMode = true;
   isLoading = false;
-  error : string = null;
-  @ViewChild(PlaceholderDirective, {static : false}) alerthost : PlaceholderDirective;
-  private closeSub : Subscription;
+  error: string = null;
+  @ViewChild(PlaceholderDirective) alertHost: PlaceholderDirective;
 
-  constructor(private authService : AuthService, private router : Router, private componentFactoryResolver : ComponentFactoryResolver) { }
+  private closeSub: Subscription;
 
-  ngOnInit(): void {
-  }
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private componentFactoryResolver: ComponentFactoryResolver
+  ) {}
 
-  onSwitchMode(){
+  onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;
   }
 
-  onSubmit(form : NgForm){
-    if(!form.valid){
+  onSubmit(form: NgForm) {
+    if (!form.valid) {
       return;
     }
-      this.isLoading = true;
-      const email = form.value.email;
-      const password = form.value.password;
+    const email = form.value.email;
+    const password = form.value.password;
 
-      let authObs : Observable<AuthResponseData>;
+    let authObs: Observable<AuthResponseData>;
 
-      if(this.isLoginMode){
-        authObs = this.authService.login(email, password);
-      }else{
-        // console.log(form.value);
-        authObs = this.authService.signUp(email, password);
-      }
-      authObs.subscribe(resData =>{
+    this.isLoading = true;
+
+    if (this.isLoginMode) {
+      authObs = this.authService.login(email, password);
+    } else {
+      authObs = this.authService.signup(email, password);
+    }
+
+    authObs.subscribe(
+      resData => {
         console.log(resData);
         this.isLoading = false;
         this.router.navigate(['/recipes']);
       },
-      errorMessage=>{
+      errorMessage => {
         console.log(errorMessage);
         this.error = errorMessage;
         this.showErrorAlert(errorMessage);
         this.isLoading = false;
-      });
-      form.reset();
+      }
+    );
+
+    form.reset();
   }
 
-  onHandleError(){
+  onHandleError() {
     this.error = null;
   }
 
-  private showErrorAlert(message : string){
+  ngOnDestroy() {
+    if (this.closeSub) {
+      this.closeSub.unsubscribe();
+    }
+  }
+
+  private showErrorAlert(message: string) {
     // const alertCmp = new AlertComponent();
-    const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(AlertComponent);
-    const hostViewContainerRef = this.alerthost.viewContainerRef;
+    const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(
+      AlertComponent
+    );
+    const hostViewContainerRef = this.alertHost.viewContainerRef;
     hostViewContainerRef.clear();
+
     const componentRef = hostViewContainerRef.createComponent(alertCmpFactory);
+
     componentRef.instance.message = message;
-    // console.log(componentRef.instance.message)
-    this.closeSub = componentRef.instance.close.subscribe(()=>{
+    this.closeSub = componentRef.instance.close.subscribe(() => {
       this.closeSub.unsubscribe();
       hostViewContainerRef.clear();
     });
   }
-
-  ngOnDestroy(){
-    if(this.closeSub)
-      this.closeSub.unsubscribe();
-  }
-
 }
