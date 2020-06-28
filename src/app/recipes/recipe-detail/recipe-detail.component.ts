@@ -1,35 +1,66 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
+import { Store } from '@ngrx/store';
+import { map, switchMap } from 'rxjs/operators';
+import * as fromApp from '../../store/app.reducer';
+import * as RecipeActions from '../store/recipe.actions';
+import * as ShoppingListActions from '../../shopping-list/store/shopping-list.actions';
 
 @Component({
   selector: 'app-recipe-detail',
   templateUrl: './recipe-detail.component.html',
   styleUrls: ['./recipe-detail.component.css']
 })
-export class RecipeDetailComponent implements OnInit {
+export class RecipeDetailComponent implements OnInit, OnDestroy {
   recipe: Recipe;
   id: number;
+  private storeSub : Subscription;
 
   constructor(private recipeService: RecipeService,
               private route: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private store : Store<fromApp.AppState>) {
   }
 
   ngOnInit() {
-    this.route.params
-      .subscribe(
-        (params: Params) => {
-          this.id = +params['id'];
-          this.recipe = this.recipeService.getRecipe(this.id);
-        }
-      );
+    this.storeSub = this.route.params
+    .pipe(
+      map(params => {
+        return +params['id'];
+      }),
+      switchMap(id =>{
+        this.id = id;
+        return this.store.select('recipe');
+      }),
+      map(recipesState => {
+        return recipesState.recipes.find((recipe, index) => {
+          return index === this.id;
+        })
+      })
+    ).subscribe(recipe => {
+      this.recipe = recipe;
+    });
+      // .subscribe(
+      //   (params: Params) => {
+      //     this.id = +params['id'];
+      //     // this.recipe = this.recipeService.getRecipe(this.id);
+      //   }
+      // );
+  }
+
+  ngOnDestroy(){
+    if(this.storeSub){
+      this.storeSub.unsubscribe();
+    }
   }
 
   onAddToShoppingList() {
-    this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+    // this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+    this.store.dispatch(new ShoppingListActions.AddIngredients(this.recipe.ingredients)); 
   }
 
   onEditRecipe() {
@@ -38,7 +69,8 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onDeleteRecipe() {
-    this.recipeService.deleteRecipe(this.id);
+    // this.recipeService.deleteRecipe(this.id);
+    this.store.dispatch(new RecipeActions.deleteRecipes(this.id));
     this.router.navigate(['/recipes']);
   }
 

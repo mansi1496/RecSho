@@ -62504,6 +62504,4653 @@ function _unsupportedIterableToArray(o, minLen) {
 
 /***/ }),
 
+/***/ "./node_modules/@ngrx/effects/__ivy_ngcc__/fesm2015/effects.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@ngrx/effects/__ivy_ngcc__/fesm2015/effects.js ***!
+  \*********************************************************************/
+/*! exports provided: Actions, EFFECTS_ERROR_HANDLER, Effect, EffectSources, EffectsFeatureModule, EffectsModule, EffectsRootModule, EffectsRunner, ROOT_EFFECTS_INIT, USER_PROVIDED_EFFECTS, act, createEffect, defaultEffectsErrorHandler, getEffectsMetadata, mergeEffects, ofType, rootEffectsInit, ɵngrx_modules_effects_effects_a, ɵngrx_modules_effects_effects_b, ɵngrx_modules_effects_effects_c, ɵngrx_modules_effects_effects_d, ɵngrx_modules_effects_effects_e, ɵngrx_modules_effects_effects_f, ɵngrx_modules_effects_effects_g, ɵngrx_modules_effects_effects_h */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Actions", function() { return Actions; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EFFECTS_ERROR_HANDLER", function() { return EFFECTS_ERROR_HANDLER; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Effect", function() { return Effect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectSources", function() { return EffectSources; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectsFeatureModule", function() { return EffectsFeatureModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectsModule", function() { return EffectsModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectsRootModule", function() { return EffectsRootModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EffectsRunner", function() { return EffectsRunner; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROOT_EFFECTS_INIT", function() { return ROOT_EFFECTS_INIT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "USER_PROVIDED_EFFECTS", function() { return USER_PROVIDED_EFFECTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "act", function() { return act; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createEffect", function() { return createEffect; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "defaultEffectsErrorHandler", function() { return defaultEffectsErrorHandler; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getEffectsMetadata", function() { return getEffectsMetadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "mergeEffects", function() { return mergeEffects; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ofType", function() { return ofType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rootEffectsInit", function() { return rootEffectsInit; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_a", function() { return getSourceMetadata; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_b", function() { return createEffects; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_c", function() { return _provideForRootGuard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_d", function() { return _ROOT_EFFECTS_GUARD; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_e", function() { return _ROOT_EFFECTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_f", function() { return ROOT_EFFECTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_g", function() { return _FEATURE_EFFECTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_effects_effects_h", function() { return FEATURE_EFFECTS; });
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper */ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+
+
+
+
+
+/**
+ * @license NgRx 9.2.0
+ * (c) 2015-2018 Brandon Roberts, Mike Ryan, Rob Wormald, Victor Savkin
+ * License: MIT
+ */
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/models.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Configures an effect created by `createEffect`.
+ * @record
+ */
+
+
+
+
+
+function EffectConfig() {}
+
+if (false) {}
+/** @type {?} */
+
+
+var DEFAULT_EFFECT_CONFIG = {
+  dispatch: true,
+  useEffectsErrorHandler: true
+};
+/** @type {?} */
+
+var CREATE_EFFECT_METADATA_KEY = '__@ngrx/effects_create__';
+/**
+ * @record
+ */
+
+function CreateEffectMetadata() {}
+
+if (false) {}
+/**
+ * @record
+ * @template T
+ */
+
+
+function EffectMetadata() {}
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effect_creator.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * \@description
+ * Creates an effect from an `Observable` and an `EffectConfig`.
+ *
+ * \@usageNotes
+ *
+ * ** Mapping to a different action **
+ * ```ts
+ * effectName$ = createEffect(
+ *   () => this.actions$.pipe(
+ *     ofType(FeatureActions.actionOne),
+ *     map(() => FeatureActions.actionTwo())
+ *   )
+ * );
+ * ```
+ *
+ *  ** Non-dispatching effects **
+ * ```ts
+ * effectName$ = createEffect(
+ *   () => this.actions$.pipe(
+ *     ofType(FeatureActions.actionOne),
+ *     tap(() => console.log('Action One Dispatched'))
+ *   ),
+ *   { dispatch: false }
+ *   // FeatureActions.actionOne is not dispatched
+ * );
+ * ```
+ * @template C, DT, OT, R
+ * @param {?} source A function which returns an `Observable`.
+ * @param {?=} config A `Partial<EffectConfig>` to configure the effect.  By default, `dispatch` is true and `useEffectsErrorHandler` is true.
+ * @return {?} If `EffectConfig`#`dispatch` is true, returns `Observable<Action>`.  Else, returns `Observable<unknown>`.
+ *
+ */
+
+
+function createEffect(source, config) {
+  /** @type {?} */
+  var effect = source();
+  /** @type {?} */
+
+  var value = Object.assign(Object.assign({}, DEFAULT_EFFECT_CONFIG), config);
+  Object.defineProperty(effect, CREATE_EFFECT_METADATA_KEY, {
+    value: value
+  });
+  return (
+    /** @type {?} */
+    effect
+  );
+}
+/**
+ * @template T
+ * @param {?} instance
+ * @return {?}
+ */
+
+
+function getCreateEffectMetadata(instance) {
+  /** @type {?} */
+  var propertyNames =
+  /** @type {?} */
+  Object.getOwnPropertyNames(instance);
+  /** @type {?} */
+
+  var metadata = propertyNames.filter(
+  /**
+  * @param {?} propertyName
+  * @return {?}
+  */
+  function (propertyName) {
+    return instance[propertyName] && instance[propertyName].hasOwnProperty(CREATE_EFFECT_METADATA_KEY);
+  }).map(
+  /**
+  * @param {?} propertyName
+  * @return {?}
+  */
+  function (propertyName) {
+    /** @type {?} */
+    var metaData =
+    /** @type {?} */
+    instance[propertyName][CREATE_EFFECT_METADATA_KEY];
+    return Object.assign({
+      propertyName: propertyName
+    }, metaData);
+  });
+  return metadata;
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/utils.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @template T
+ * @param {?} instance
+ * @return {?}
+ */
+
+
+function getSourceForInstance(instance) {
+  return Object.getPrototypeOf(instance);
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effect_decorator.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var METADATA_KEY = '__@ngrx/effects__';
+/**
+ * @param {?=} config
+ * @return {?}
+ */
+
+function Effect() {
+  var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  return (
+    /**
+    * @template T, K
+    * @param {?} target
+    * @param {?} propertyName
+    * @return {?}
+    */
+    function (target, propertyName) {
+      /** @type {?} */
+      var metadata = Object.assign(Object.assign(Object.assign({}, DEFAULT_EFFECT_CONFIG), config), {
+        // Overrides any defaults if values are provided
+        propertyName: propertyName
+      });
+      addEffectMetadataEntry(target, metadata);
+    }
+  );
+}
+/**
+ * @template T
+ * @param {?} instance
+ * @return {?}
+ */
+
+
+function getEffectDecoratorMetadata(instance) {
+  /** @type {?} */
+  var effectsDecorators = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["compose"])(getEffectMetadataEntries, getSourceForInstance)(instance);
+  return effectsDecorators;
+}
+/**
+ * Type guard to detemine whether METADATA_KEY is already present on the Class
+ * constructor
+ * @template T
+ * @param {?} sourceProto
+ * @return {?}
+ */
+
+
+function hasMetadataEntries(sourceProto) {
+  return sourceProto.constructor.hasOwnProperty(METADATA_KEY);
+}
+/**
+ * Add Effect Metadata to the Effect Class constructor under specific key
+ * @template T
+ * @param {?} sourceProto
+ * @param {?} metadata
+ * @return {?}
+ */
+
+
+function addEffectMetadataEntry(sourceProto, metadata) {
+  if (hasMetadataEntries(sourceProto)) {
+    sourceProto.constructor[METADATA_KEY].push(metadata);
+  } else {
+    Object.defineProperty(sourceProto.constructor, METADATA_KEY, {
+      value: [metadata]
+    });
+  }
+}
+/**
+ * @template T
+ * @param {?} sourceProto
+ * @return {?}
+ */
+
+
+function getEffectMetadataEntries(sourceProto) {
+  return hasMetadataEntries(sourceProto) ? sourceProto.constructor[METADATA_KEY] : [];
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effects_metadata.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @template T
+ * @param {?} instance
+ * @return {?}
+ */
+
+
+function getEffectsMetadata(instance) {
+  return getSourceMetadata(instance).reduce(
+  /**
+  * @param {?} acc
+  * @param {?} __1
+  * @return {?}
+  */
+  function (acc, _ref) {
+    var propertyName = _ref.propertyName,
+        dispatch = _ref.dispatch,
+        useEffectsErrorHandler = _ref.useEffectsErrorHandler;
+    acc[propertyName] = {
+      dispatch: dispatch,
+      useEffectsErrorHandler: useEffectsErrorHandler
+    };
+    return acc;
+  }, {});
+}
+/**
+ * @template T
+ * @param {?} instance
+ * @return {?}
+ */
+
+
+function getSourceMetadata(instance) {
+  /** @type {?} */
+  var effects = [getEffectDecoratorMetadata, getCreateEffectMetadata];
+  return effects.reduce(
+  /**
+  * @param {?} sources
+  * @param {?} source
+  * @return {?}
+  */
+  function (sources, source) {
+    return sources.concat(source(instance));
+  }, []);
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effects_resolver.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @param {?} sourceInstance
+ * @param {?} globalErrorHandler
+ * @param {?} effectsErrorHandler
+ * @return {?}
+ */
+
+
+function mergeEffects(sourceInstance, globalErrorHandler, effectsErrorHandler) {
+  /** @type {?} */
+  var sourceName = getSourceForInstance(sourceInstance).constructor.name;
+  /** @type {?} */
+
+  var observables$ = getSourceMetadata(sourceInstance).map(
+  /**
+  * @param {?} __0
+  * @return {?}
+  */
+  function (_ref2) {
+    var propertyName = _ref2.propertyName,
+        dispatch = _ref2.dispatch,
+        useEffectsErrorHandler = _ref2.useEffectsErrorHandler;
+
+    /** @type {?} */
+    var observable$ = typeof sourceInstance[propertyName] === 'function' ? sourceInstance[propertyName]() : sourceInstance[propertyName];
+    /** @type {?} */
+
+    var effectAction$ = useEffectsErrorHandler ? effectsErrorHandler(observable$, globalErrorHandler) : observable$;
+
+    if (dispatch === false) {
+      return effectAction$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["ignoreElements"])());
+    }
+    /** @type {?} */
+
+
+    var materialized$ = effectAction$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["materialize"])());
+    return materialized$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(
+    /**
+    * @param {?} notification
+    * @return {?}
+    */
+    function (notification) {
+      return {
+        effect: sourceInstance[propertyName],
+        notification: notification,
+        propertyName: propertyName,
+        sourceName: sourceName,
+        sourceInstance: sourceInstance
+      };
+    }));
+  });
+  return rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"].apply(void 0, Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_5__["default"])(observables$));
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effects_error_handler.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var MAX_NUMBER_OF_RETRY_ATTEMPTS = 10;
+/**
+ * @template T
+ * @param {?} observable$
+ * @param {?} errorHandler
+ * @param {?=} retryAttemptLeft
+ * @return {?}
+ */
+
+function defaultEffectsErrorHandler(observable$, errorHandler) {
+  var retryAttemptLeft = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : MAX_NUMBER_OF_RETRY_ATTEMPTS;
+  return observable$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["catchError"])(
+  /**
+  * @param {?} error
+  * @return {?}
+  */
+  function (error) {
+    if (errorHandler) errorHandler.handleError(error);
+
+    if (retryAttemptLeft <= 1) {
+      return observable$; // last attempt
+    } // Return observable that produces this particular effect
+
+
+    return defaultEffectsErrorHandler(observable$, errorHandler, retryAttemptLeft - 1);
+  }));
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/actions.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @template V
+ */
+
+
+var Actions = /*#__PURE__*/function (_Observable) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(Actions, _Observable);
+
+  var _super = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(Actions);
+
+  /**
+   * @param {?=} source
+   */
+  function Actions(source) {
+    var _this;
+
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Actions);
+
+    _this = _super.call(this);
+
+    if (source) {
+      _this.source = source;
+    }
+
+    return _this;
+  }
+  /**
+   * @template R
+   * @param {?} operator
+   * @return {?}
+   */
+
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Actions, [{
+    key: "lift",
+    value: function lift(operator) {
+      /** @type {?} */
+      var observable = new Actions();
+      observable.source = this;
+      observable.operator = operator;
+      return observable;
+    }
+  }]);
+
+  return Actions;
+}(rxjs__WEBPACK_IMPORTED_MODULE_7__["Observable"]);
+
+Actions.ɵfac = function Actions_Factory(t) {
+  return new (t || Actions)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["ScannedActionsSubject"]));
+};
+
+Actions.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjectable"]({
+  token: Actions,
+  factory: Actions.ɵfac
+});
+/** @nocollapse */
+
+Actions.ctorParameters = function () {
+  return [{
+    type: rxjs__WEBPACK_IMPORTED_MODULE_7__["Observable"],
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+      args: [_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["ScannedActionsSubject"]]
+    }]
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵsetClassMetadata"](Actions, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Injectable"]
+  }], function () {
+    return [{
+      type: rxjs__WEBPACK_IMPORTED_MODULE_7__["Observable"],
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+        args: [_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["ScannedActionsSubject"]]
+      }]
+    }];
+  }, null);
+})();
+/**
+ * @param {...?} allowedTypes
+ * @return {?}
+ */
+
+
+function ofType() {
+  for (var _len = arguments.length, allowedTypes = new Array(_len), _key = 0; _key < _len; _key++) {
+    allowedTypes[_key] = arguments[_key];
+  }
+
+  return Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(
+  /**
+  * @param {?} action
+  * @return {?}
+  */
+  function (action) {
+    return allowedTypes.some(
+    /**
+    * @param {?} typeOrActionCreator
+    * @return {?}
+    */
+    function (typeOrActionCreator) {
+      if (typeof typeOrActionCreator === 'string') {
+        // Comparing the string to type
+        return typeOrActionCreator === action.type;
+      } // We are filtering by ActionCreator
+
+
+      return typeOrActionCreator.type === action.type;
+    });
+  });
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effect_notification.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @record
+ */
+
+
+function EffectNotification() {}
+
+if (false) {}
+/**
+ * @param {?} output
+ * @param {?} reporter
+ * @return {?}
+ */
+
+
+function reportInvalidActions(output, reporter) {
+  if (output.notification.kind === 'N') {
+    /** @type {?} */
+    var action = output.notification.value;
+    /** @type {?} */
+
+    var isInvalidAction = !isAction(action);
+
+    if (isInvalidAction) {
+      reporter.handleError(new Error("Effect ".concat(getEffectName(output), " dispatched an invalid action: ").concat(stringify(action))));
+    }
+  }
+}
+/**
+ * @param {?} action
+ * @return {?}
+ */
+
+
+function isAction(action) {
+  return typeof action !== 'function' && action && action.type && typeof action.type === 'string';
+}
+/**
+ * @param {?} __0
+ * @return {?}
+ */
+
+
+function getEffectName(_ref3) {
+  var propertyName = _ref3.propertyName,
+      sourceInstance = _ref3.sourceInstance,
+      sourceName = _ref3.sourceName;
+
+  /** @type {?} */
+  var isMethod = typeof sourceInstance[propertyName] === 'function';
+  return "\"".concat(sourceName, ".").concat(String(propertyName)).concat(isMethod ? '()' : '', "\"");
+}
+/**
+ * @param {?} action
+ * @return {?}
+ */
+
+
+function stringify(action) {
+  try {
+    return JSON.stringify(action);
+  } catch (_a) {
+    return action;
+  }
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/lifecycle_hooks.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var onIdentifyEffectsKey = 'ngrxOnIdentifyEffects';
+/**
+ * @param {?} instance
+ * @return {?}
+ */
+
+function isOnIdentifyEffects(instance) {
+  return isFunction(instance, onIdentifyEffectsKey);
+}
+/** @type {?} */
+
+
+var onRunEffectsKey = 'ngrxOnRunEffects';
+/**
+ * @param {?} instance
+ * @return {?}
+ */
+
+function isOnRunEffects(instance) {
+  return isFunction(instance, onRunEffectsKey);
+}
+/** @type {?} */
+
+
+var onInitEffects = 'ngrxOnInitEffects';
+/**
+ * @param {?} instance
+ * @return {?}
+ */
+
+function isOnInitEffects(instance) {
+  return isFunction(instance, onInitEffects);
+}
+/**
+ * @param {?} instance
+ * @param {?} functionName
+ * @return {?}
+ */
+
+
+function isFunction(instance, functionName) {
+  return instance && functionName in instance && typeof instance[functionName] === 'function';
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/tokens.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var _ROOT_EFFECTS_GUARD = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('@ngrx/effects Internal Root Guard');
+/** @type {?} */
+
+
+var IMMEDIATE_EFFECTS = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('ngrx/effects: Immediate Effects');
+/** @type {?} */
+
+var USER_PROVIDED_EFFECTS = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('ngrx/effects: User Provided Effects');
+/** @type {?} */
+
+var _ROOT_EFFECTS = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('ngrx/effects: Internal Root Effects');
+/** @type {?} */
+
+
+var ROOT_EFFECTS = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('ngrx/effects: Root Effects');
+/** @type {?} */
+
+var _FEATURE_EFFECTS = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('ngrx/effects: Internal Feature Effects');
+/** @type {?} */
+
+
+var FEATURE_EFFECTS = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('ngrx/effects: Feature Effects');
+/** @type {?} */
+
+var EFFECTS_ERROR_HANDLER = new _angular_core__WEBPACK_IMPORTED_MODULE_9__["InjectionToken"]('ngrx/effects: Effects Error Handler');
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effect_sources.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+var EffectSources = /*#__PURE__*/function (_Subject) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(EffectSources, _Subject);
+
+  var _super2 = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(EffectSources);
+
+  /**
+   * @param {?} errorHandler
+   * @param {?} effectsErrorHandler
+   */
+  function EffectSources(errorHandler, effectsErrorHandler) {
+    var _this2;
+
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, EffectSources);
+
+    _this2 = _super2.call(this);
+    _this2.errorHandler = errorHandler;
+    _this2.effectsErrorHandler = effectsErrorHandler;
+    return _this2;
+  }
+  /**
+   * @param {?} effectSourceInstance
+   * @return {?}
+   */
+
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(EffectSources, [{
+    key: "addEffects",
+    value: function addEffects(effectSourceInstance) {
+      this.next(effectSourceInstance);
+    }
+    /**
+     * \@internal
+     * @return {?}
+     */
+
+  }, {
+    key: "toActions",
+    value: function toActions() {
+      var _this3 = this;
+
+      return this.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["groupBy"])(getSourceForInstance), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["mergeMap"])(
+      /**
+      * @param {?} source$
+      * @return {?}
+      */
+      function (source$) {
+        return source$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["groupBy"])(effectsInstance));
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["mergeMap"])(
+      /**
+      * @param {?} source$
+      * @return {?}
+      */
+      function (source$) {
+        /** @type {?} */
+        var effect$ = source$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["exhaustMap"])(
+        /**
+        * @param {?} sourceInstance
+        * @return {?}
+        */
+        function (sourceInstance) {
+          return resolveEffectSource(_this3.errorHandler, _this3.effectsErrorHandler)(sourceInstance);
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(
+        /**
+        * @param {?} output
+        * @return {?}
+        */
+        function (output) {
+          reportInvalidActions(output, _this3.errorHandler);
+          return output.notification;
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(
+        /**
+        * @param {?} notification
+        * @return {?}
+        */
+        function (notification) {
+          return notification.kind === 'N';
+        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["dematerialize"])()); // start the stream with an INIT action
+        // do this only for the first Effect instance
+
+        /** @type {?} */
+
+        var init$ = source$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["take"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(isOnInitEffects), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(
+        /**
+        * @param {?} instance
+        * @return {?}
+        */
+        function (instance) {
+          return instance.ngrxOnInitEffects();
+        }));
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(effect$, init$);
+      }));
+    }
+  }]);
+
+  return EffectSources;
+}(rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]);
+
+EffectSources.ɵfac = function EffectSources_Factory(t) {
+  return new (t || EffectSources)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_9__["ErrorHandler"]), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](EFFECTS_ERROR_HANDLER));
+};
+
+EffectSources.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjectable"]({
+  token: EffectSources,
+  factory: EffectSources.ɵfac
+});
+/** @nocollapse */
+
+EffectSources.ctorParameters = function () {
+  return [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["ErrorHandler"]
+  }, {
+    type: undefined,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+      args: [EFFECTS_ERROR_HANDLER]
+    }]
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵsetClassMetadata"](EffectSources, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Injectable"]
+  }], function () {
+    return [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["ErrorHandler"]
+    }, {
+      type: undefined,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+        args: [EFFECTS_ERROR_HANDLER]
+      }]
+    }];
+  }, null);
+})();
+
+if (false) {}
+/**
+ * @param {?} sourceInstance
+ * @return {?}
+ */
+
+
+function effectsInstance(sourceInstance) {
+  if (isOnIdentifyEffects(sourceInstance)) {
+    return sourceInstance.ngrxOnIdentifyEffects();
+  }
+
+  return '';
+}
+/**
+ * @param {?} errorHandler
+ * @param {?} effectsErrorHandler
+ * @return {?}
+ */
+
+
+function resolveEffectSource(errorHandler, effectsErrorHandler) {
+  return (
+    /**
+    * @param {?} sourceInstance
+    * @return {?}
+    */
+    function (sourceInstance) {
+      /** @type {?} */
+      var mergedEffects$ = mergeEffects(sourceInstance, errorHandler, effectsErrorHandler);
+
+      if (isOnRunEffects(sourceInstance)) {
+        return sourceInstance.ngrxOnRunEffects(mergedEffects$);
+      }
+
+      return mergedEffects$;
+    }
+  );
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effects_runner.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+var EffectsRunner = /*#__PURE__*/function () {
+  /**
+   * @param {?} effectSources
+   * @param {?} store
+   */
+  function EffectsRunner(effectSources, store) {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, EffectsRunner);
+
+    this.effectSources = effectSources;
+    this.store = store;
+    this.effectsSubscription = null;
+  }
+  /**
+   * @return {?}
+   */
+
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(EffectsRunner, [{
+    key: "start",
+    value: function start() {
+      if (!this.effectsSubscription) {
+        this.effectsSubscription = this.effectSources.toActions().subscribe(this.store);
+      }
+    }
+    /**
+     * @return {?}
+     */
+
+  }, {
+    key: "ngOnDestroy",
+    value: function ngOnDestroy() {
+      if (this.effectsSubscription) {
+        this.effectsSubscription.unsubscribe();
+        this.effectsSubscription = null;
+      }
+    }
+  }]);
+
+  return EffectsRunner;
+}();
+
+EffectsRunner.ɵfac = function EffectsRunner_Factory(t) {
+  return new (t || EffectsRunner)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](EffectSources), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]));
+};
+
+EffectsRunner.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjectable"]({
+  token: EffectsRunner,
+  factory: EffectsRunner.ɵfac
+});
+/** @nocollapse */
+
+EffectsRunner.ctorParameters = function () {
+  return [{
+    type: EffectSources
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵsetClassMetadata"](EffectsRunner, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Injectable"]
+  }], function () {
+    return [{
+      type: EffectSources
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]
+    }];
+  }, null);
+})();
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effects_root_module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var ROOT_EFFECTS_INIT = '@ngrx/effects/init';
+/** @type {?} */
+
+var rootEffectsInit = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["createAction"])(ROOT_EFFECTS_INIT);
+
+var EffectsRootModule = /*#__PURE__*/function () {
+  /**
+   * @param {?} sources
+   * @param {?} runner
+   * @param {?} store
+   * @param {?} rootEffects
+   * @param {?} storeRootModule
+   * @param {?} storeFeatureModule
+   * @param {?} guard
+   */
+  function EffectsRootModule(sources, runner, store, rootEffects, storeRootModule, storeFeatureModule, guard) {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, EffectsRootModule);
+
+    this.sources = sources;
+    runner.start();
+    rootEffects.forEach(
+    /**
+    * @param {?} effectSourceInstance
+    * @return {?}
+    */
+    function (effectSourceInstance) {
+      return sources.addEffects(effectSourceInstance);
+    });
+    store.dispatch({
+      type: ROOT_EFFECTS_INIT
+    });
+  }
+  /**
+   * @param {?} effectSourceInstance
+   * @return {?}
+   */
+
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(EffectsRootModule, [{
+    key: "addEffects",
+    value: function addEffects(effectSourceInstance) {
+      this.sources.addEffects(effectSourceInstance);
+    }
+  }]);
+
+  return EffectsRootModule;
+}();
+
+EffectsRootModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({
+  type: EffectsRootModule
+});
+EffectsRootModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({
+  factory: function EffectsRootModule_Factory(t) {
+    return new (t || EffectsRootModule)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](EffectSources), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](EffectsRunner), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](ROOT_EFFECTS), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreRootModule"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreFeatureModule"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ROOT_EFFECTS_GUARD, 8));
+  }
+});
+/** @nocollapse */
+
+EffectsRootModule.ctorParameters = function () {
+  return [{
+    type: EffectSources
+  }, {
+    type: EffectsRunner
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]
+  }, {
+    type: Array,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+      args: [ROOT_EFFECTS]
+    }]
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreRootModule"],
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+    }]
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreFeatureModule"],
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+    }]
+  }, {
+    type: undefined,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+      args: [_ROOT_EFFECTS_GUARD]
+    }]
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵsetClassMetadata"](EffectsRootModule, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["NgModule"],
+    args: [{}]
+  }], function () {
+    return [{
+      type: EffectSources
+    }, {
+      type: EffectsRunner
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["Store"]
+    }, {
+      type: Array,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+        args: [ROOT_EFFECTS]
+      }]
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreRootModule"],
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+      }]
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreFeatureModule"],
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+      }]
+    }, {
+      type: undefined,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+        args: [_ROOT_EFFECTS_GUARD]
+      }]
+    }];
+  }, null);
+})();
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effects_feature_module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+var EffectsFeatureModule =
+/**
+ * @param {?} root
+ * @param {?} effectSourceGroups
+ * @param {?} storeRootModule
+ * @param {?} storeFeatureModule
+ */
+function EffectsFeatureModule(root, effectSourceGroups, storeRootModule, storeFeatureModule) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, EffectsFeatureModule);
+
+  effectSourceGroups.forEach(
+  /**
+  * @param {?} group
+  * @return {?}
+  */
+  function (group) {
+    return group.forEach(
+    /**
+    * @param {?} effectSourceInstance
+    * @return {?}
+    */
+    function (effectSourceInstance) {
+      return root.addEffects(effectSourceInstance);
+    });
+  });
+};
+
+EffectsFeatureModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({
+  type: EffectsFeatureModule
+});
+EffectsFeatureModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({
+  factory: function EffectsFeatureModule_Factory(t) {
+    return new (t || EffectsFeatureModule)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](EffectsRootModule), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](FEATURE_EFFECTS), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreRootModule"], 8), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreFeatureModule"], 8));
+  }
+});
+/** @nocollapse */
+
+EffectsFeatureModule.ctorParameters = function () {
+  return [{
+    type: EffectsRootModule
+  }, {
+    type: Array,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+      args: [FEATURE_EFFECTS]
+    }]
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreRootModule"],
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+    }]
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreFeatureModule"],
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+    }]
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵsetClassMetadata"](EffectsFeatureModule, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["NgModule"],
+    args: [{}]
+  }], function () {
+    return [{
+      type: EffectsRootModule
+    }, {
+      type: Array,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Inject"],
+        args: [FEATURE_EFFECTS]
+      }]
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreRootModule"],
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+      }]
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_6__["StoreFeatureModule"],
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"]
+      }]
+    }];
+  }, null);
+})();
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/effects_module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+var EffectsModule = /*#__PURE__*/function () {
+  function EffectsModule() {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, EffectsModule);
+  }
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(EffectsModule, null, [{
+    key: "forFeature",
+
+    /**
+     * @param {?=} featureEffects
+     * @return {?}
+     */
+    value: function forFeature() {
+      var featureEffects = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      return {
+        ngModule: EffectsFeatureModule,
+        providers: [featureEffects, {
+          provide: _FEATURE_EFFECTS,
+          multi: true,
+          useValue: featureEffects
+        }, {
+          provide: USER_PROVIDED_EFFECTS,
+          multi: true,
+          useValue: []
+        }, {
+          provide: FEATURE_EFFECTS,
+          multi: true,
+          useFactory: createEffects,
+          deps: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["Injector"], _FEATURE_EFFECTS, USER_PROVIDED_EFFECTS]
+        }]
+      };
+    }
+    /**
+     * @param {?=} rootEffects
+     * @return {?}
+     */
+
+  }, {
+    key: "forRoot",
+    value: function forRoot() {
+      var rootEffects = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      return {
+        ngModule: EffectsRootModule,
+        providers: [{
+          provide: _ROOT_EFFECTS_GUARD,
+          useFactory: _provideForRootGuard,
+          deps: [[EffectsRunner, new _angular_core__WEBPACK_IMPORTED_MODULE_9__["Optional"](), new _angular_core__WEBPACK_IMPORTED_MODULE_9__["SkipSelf"]()]]
+        }, {
+          provide: EFFECTS_ERROR_HANDLER,
+          useValue: defaultEffectsErrorHandler
+        }, EffectsRunner, EffectSources, Actions, rootEffects, {
+          provide: _ROOT_EFFECTS,
+          useValue: [rootEffects]
+        }, {
+          provide: USER_PROVIDED_EFFECTS,
+          multi: true,
+          useValue: []
+        }, {
+          provide: ROOT_EFFECTS,
+          useFactory: createEffects,
+          deps: [_angular_core__WEBPACK_IMPORTED_MODULE_9__["Injector"], _ROOT_EFFECTS, USER_PROVIDED_EFFECTS]
+        }]
+      };
+    }
+  }]);
+
+  return EffectsModule;
+}();
+
+EffectsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineNgModule"]({
+  type: EffectsModule
+});
+EffectsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineInjector"]({
+  factory: function EffectsModule_Factory(t) {
+    return new (t || EffectsModule)();
+  }
+});
+/*@__PURE__*/
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵsetClassMetadata"](EffectsModule, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_9__["NgModule"],
+    args: [{}]
+  }], null, null);
+})();
+/**
+ * @param {?} injector
+ * @param {?} effectGroups
+ * @param {?} userProvidedEffectGroups
+ * @return {?}
+ */
+
+
+function createEffects(injector, effectGroups, userProvidedEffectGroups) {
+  /** @type {?} */
+  var mergedEffects = [];
+
+  var _iterator = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper__WEBPACK_IMPORTED_MODULE_0__["default"])(effectGroups),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var effectGroup = _step.value;
+      mergedEffects.push.apply(mergedEffects, Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_5__["default"])(effectGroup));
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  var _iterator2 = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper__WEBPACK_IMPORTED_MODULE_0__["default"])(userProvidedEffectGroups),
+      _step2;
+
+  try {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      var userProvidedEffectGroup = _step2.value;
+      mergedEffects.push.apply(mergedEffects, Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_5__["default"])(userProvidedEffectGroup));
+    }
+  } catch (err) {
+    _iterator2.e(err);
+  } finally {
+    _iterator2.f();
+  }
+
+  return createEffectInstances(injector, mergedEffects);
+}
+/**
+ * @param {?} injector
+ * @param {?} effects
+ * @return {?}
+ */
+
+
+function createEffectInstances(injector, effects) {
+  return effects.map(
+  /**
+  * @param {?} effect
+  * @return {?}
+  */
+  function (effect) {
+    return injector.get(effect);
+  });
+}
+/**
+ * @param {?} runner
+ * @return {?}
+ */
+
+
+function _provideForRootGuard(runner) {
+  if (runner) {
+    throw new TypeError("EffectsModule.forRoot() called twice. Feature modules should use EffectsModule.forFeature() instead.");
+  }
+
+  return 'guarded';
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/act.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Represents config with named paratemeters for act
+ * @record
+ * @template Input, OutputAction, ErrorAction, CompleteAction, UnsubscribeAction
+ */
+
+
+function ActConfig() {}
+
+if (false) {}
+/**
+ * @template Input, OutputAction, ErrorAction, CompleteAction, UnsubscribeAction
+ * @param {?} configOrProject
+ * @param {?=} errorFn
+ * @return {?}
+ */
+
+
+function act(
+/** Allow to take either config object or project/error functions */
+configOrProject, errorFn) {
+  var _ref4 = typeof configOrProject === 'function' ? {
+    project: configOrProject,
+    error:
+    /** @type {?} */
+    errorFn,
+    operator: rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["concatMap"],
+    complete: undefined,
+    unsubscribe: undefined
+  } : Object.assign(Object.assign({}, configOrProject), {
+    operator: configOrProject.operator || rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["concatMap"]
+  }),
+      project = _ref4.project,
+      error = _ref4.error,
+      complete = _ref4.complete,
+      operator = _ref4.operator,
+      unsubscribe = _ref4.unsubscribe;
+
+  return (
+    /**
+    * @param {?} source
+    * @return {?}
+    */
+    function (source) {
+      return Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["defer"])(
+      /**
+      * @return {?}
+      */
+      function () {
+        /** @type {?} */
+        var subject = new rxjs__WEBPACK_IMPORTED_MODULE_7__["Subject"]();
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["merge"])(source.pipe(operator(
+        /**
+        * @param {?} input
+        * @param {?} index
+        * @return {?}
+        */
+        function (input, index) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_7__["defer"])(
+          /**
+          * @return {?}
+          */
+          function () {
+            /** @type {?} */
+            var completed = false;
+            /** @type {?} */
+
+            var errored = false;
+            /** @type {?} */
+
+            var projectedCount = 0;
+            return project(input, index).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["materialize"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(
+            /**
+            * @param {?} notification
+            * @return {?}
+            */
+            function (notification) {
+              switch (notification.kind) {
+                case 'E':
+                  errored = true;
+                  return new rxjs__WEBPACK_IMPORTED_MODULE_7__["Notification"](
+                  /** @type {?} */
+                  // TODO: remove any in RxJS 6.5
+                  'N', error(notification.error, input));
+
+                case 'C':
+                  completed = true;
+                  return complete ? new rxjs__WEBPACK_IMPORTED_MODULE_7__["Notification"](
+                  /** @type {?} */
+                  // TODO: remove any in RxJS 6.5
+                  'N', complete(projectedCount, input)) : undefined;
+
+                default:
+                  ++projectedCount;
+                  return notification;
+              }
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["filter"])(
+            /**
+            * @param {?} n
+            * @return {?}
+            */
+            function (n) {
+              return n != null;
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["dematerialize"])(), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["finalize"])(
+            /**
+            * @return {?}
+            */
+            function () {
+              if (!completed && !errored && unsubscribe) {
+                subject.next(unsubscribe(projectedCount, input));
+              }
+            }));
+          });
+        })), subject);
+      });
+    }
+  );
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/src/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/effects/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@ngrx/router-store/__ivy_ngcc__/fesm2015/router-store.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@ngrx/router-store/__ivy_ngcc__/fesm2015/router-store.js ***!
+  \*******************************************************************************/
+/*! exports provided: DEFAULT_ROUTER_FEATURENAME, DefaultRouterStateSerializer, MinimalRouterStateSerializer, NavigationActionTiming, ROUTER_CANCEL, ROUTER_CONFIG, ROUTER_ERROR, ROUTER_NAVIGATED, ROUTER_NAVIGATION, ROUTER_REQUEST, RouterStateSerializer, StoreRouterConnectingModule, getSelectors, routerCancelAction, routerErrorAction, routerNavigatedAction, routerNavigationAction, routerReducer, routerRequestAction, ɵngrx_modules_router_store_router_store_a, ɵngrx_modules_router_store_router_store_b */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DEFAULT_ROUTER_FEATURENAME", function() { return DEFAULT_ROUTER_FEATURENAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultRouterStateSerializer", function() { return DefaultRouterStateSerializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MinimalRouterStateSerializer", function() { return MinimalRouterStateSerializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationActionTiming", function() { return NavigationActionTiming; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_CANCEL", function() { return ROUTER_CANCEL; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_CONFIG", function() { return ROUTER_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_ERROR", function() { return ROUTER_ERROR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_NAVIGATED", function() { return ROUTER_NAVIGATED; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_NAVIGATION", function() { return ROUTER_NAVIGATION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ROUTER_REQUEST", function() { return ROUTER_REQUEST; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RouterStateSerializer", function() { return RouterStateSerializer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreRouterConnectingModule", function() { return StoreRouterConnectingModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSelectors", function() { return getSelectors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerCancelAction", function() { return routerCancelAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerErrorAction", function() { return routerErrorAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerNavigatedAction", function() { return routerNavigatedAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerNavigationAction", function() { return routerNavigationAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerReducer", function() { return routerReducer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routerRequestAction", function() { return routerRequestAction; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_router_store_router_store_a", function() { return _ROUTER_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_router_store_router_store_b", function() { return _createRouterConfig; });
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+/**
+ * @license NgRx 9.2.0
+ * (c) 2015-2018 Brandon Roberts, Mike Ryan, Rob Wormald, Victor Savkin
+ * License: MIT
+ */
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/actions.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * An action dispatched when a router navigation request is fired.
+ * @type {?}
+ */
+
+
+
+
+var ROUTER_REQUEST = '@ngrx/router-store/request';
+/** @type {?} */
+
+var routerRequestAction = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createAction"])(ROUTER_REQUEST, Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["props"])());
+/**
+ * An action dispatched when the router navigates.
+ * @type {?}
+ */
+
+var ROUTER_NAVIGATION = '@ngrx/router-store/navigation';
+/** @type {?} */
+
+var routerNavigationAction = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createAction"])(ROUTER_NAVIGATION, Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["props"])());
+/**
+ * An action dispatched when the router cancels navigation.
+ * @type {?}
+ */
+
+var ROUTER_CANCEL = '@ngrx/router-store/cancel';
+/** @type {?} */
+
+var routerCancelAction = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createAction"])(ROUTER_CANCEL, Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["props"])());
+/**
+ * An action dispatched when the router errors.
+ * @type {?}
+ */
+
+var ROUTER_ERROR = '@ngrx/router-store/error';
+/** @type {?} */
+
+var routerErrorAction = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createAction"])(ROUTER_ERROR, Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["props"])());
+/**
+ * An action dispatched after navigation has ended and new route is active.
+ * @type {?}
+ */
+
+var ROUTER_NAVIGATED = '@ngrx/router-store/navigated';
+/** @type {?} */
+
+var routerNavigatedAction = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createAction"])(ROUTER_NAVIGATED, Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["props"])());
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/reducer.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @template T
+ * @param {?} state
+ * @param {?} action
+ * @return {?}
+ */
+
+function routerReducer(state, action) {
+  // Allow compilation with strictFunctionTypes - ref: #1344
+
+  /** @type {?} */
+  var routerAction =
+  /** @type {?} */
+  action;
+
+  switch (routerAction.type) {
+    case ROUTER_NAVIGATION:
+    case ROUTER_ERROR:
+    case ROUTER_CANCEL:
+      return {
+        state: routerAction.payload.routerState,
+        navigationId: routerAction.payload.event.id
+      };
+
+    default:
+      return (
+        /** @type {?} */
+        state
+      );
+  }
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/serializers/base.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Simple router state.
+ * All custom router states / state serializers should have at least
+ * the properties of this interface.
+ * @record
+ */
+
+
+function BaseRouterStoreState() {}
+
+if (false) {}
+/**
+ * @abstract
+ * @template T
+ */
+
+
+var RouterStateSerializer = function RouterStateSerializer() {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, RouterStateSerializer);
+};
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/serializers/default_serializer.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @record
+ */
+
+
+function SerializedRouterStateSnapshot() {}
+
+if (false) {}
+
+var DefaultRouterStateSerializer = /*#__PURE__*/function () {
+  function DefaultRouterStateSerializer() {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, DefaultRouterStateSerializer);
+  }
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(DefaultRouterStateSerializer, [{
+    key: "serialize",
+
+    /**
+     * @param {?} routerState
+     * @return {?}
+     */
+    value: function serialize(routerState) {
+      return {
+        root: this.serializeRoute(routerState.root),
+        url: routerState.url
+      };
+    }
+    /**
+     * @private
+     * @param {?} route
+     * @return {?}
+     */
+
+  }, {
+    key: "serializeRoute",
+    value: function serializeRoute(route) {
+      var _this = this;
+
+      /** @type {?} */
+      var children = route.children.map(
+      /**
+      * @param {?} c
+      * @return {?}
+      */
+      function (c) {
+        return _this.serializeRoute(c);
+      });
+      return {
+        params: route.params,
+        paramMap: route.paramMap,
+        data: route.data,
+        url: route.url,
+        outlet: route.outlet,
+        routeConfig: route.routeConfig ? {
+          component: route.routeConfig.component,
+          path: route.routeConfig.path,
+          pathMatch: route.routeConfig.pathMatch,
+          redirectTo: route.routeConfig.redirectTo,
+          outlet: route.routeConfig.outlet
+        } : null,
+        queryParams: route.queryParams,
+        queryParamMap: route.queryParamMap,
+        fragment: route.fragment,
+        component:
+        /** @type {?} */
+        route.routeConfig ? route.routeConfig.component : undefined,
+        root:
+        /** @type {?} */
+        undefined,
+        parent:
+        /** @type {?} */
+        undefined,
+        firstChild: children[0],
+        pathFromRoot:
+        /** @type {?} */
+        undefined,
+        children: children
+      };
+    }
+  }]);
+
+  return DefaultRouterStateSerializer;
+}();
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/serializers/minimal_serializer.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @record
+ */
+
+
+function MinimalActivatedRouteSnapshot() {}
+
+if (false) {}
+/**
+ * @record
+ */
+
+
+function MinimalRouterStateSnapshot() {}
+
+if (false) {}
+
+var MinimalRouterStateSerializer = /*#__PURE__*/function () {
+  function MinimalRouterStateSerializer() {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, MinimalRouterStateSerializer);
+  }
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(MinimalRouterStateSerializer, [{
+    key: "serialize",
+
+    /**
+     * @param {?} routerState
+     * @return {?}
+     */
+    value: function serialize(routerState) {
+      return {
+        root: this.serializeRoute(routerState.root),
+        url: routerState.url
+      };
+    }
+    /**
+     * @private
+     * @param {?} route
+     * @return {?}
+     */
+
+  }, {
+    key: "serializeRoute",
+    value: function serializeRoute(route) {
+      var _this2 = this;
+
+      /** @type {?} */
+      var children = route.children.map(
+      /**
+      * @param {?} c
+      * @return {?}
+      */
+      function (c) {
+        return _this2.serializeRoute(c);
+      });
+      return {
+        params: route.params,
+        data: route.data,
+        url: route.url,
+        outlet: route.outlet,
+        routeConfig: route.routeConfig ? {
+          path: route.routeConfig.path,
+          pathMatch: route.routeConfig.pathMatch,
+          redirectTo: route.routeConfig.redirectTo,
+          outlet: route.routeConfig.outlet
+        } : null,
+        queryParams: route.queryParams,
+        fragment: route.fragment,
+        firstChild: children[0],
+        children: children
+      };
+    }
+  }]);
+
+  return MinimalRouterStateSerializer;
+}();
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/router_store_module.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @enum {number} */
+
+
+var RouterState = {
+  Full: 0,
+  Minimal: 1
+};
+/**
+ * @record
+ * @template T
+ */
+
+function StoreRouterConfig() {}
+
+if (false) {}
+/**
+ * @record
+ */
+
+
+function StoreRouterActionPayload() {}
+
+if (false) {}
+/** @enum {number} */
+
+
+var NavigationActionTiming = {
+  PreActivation: 1,
+  PostActivation: 2
+};
+NavigationActionTiming[NavigationActionTiming.PreActivation] = 'PreActivation';
+NavigationActionTiming[NavigationActionTiming.PostActivation] = 'PostActivation';
+/** @type {?} */
+
+var _ROUTER_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["InjectionToken"]('@ngrx/router-store Internal Configuration');
+/** @type {?} */
+
+
+var ROUTER_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_4__["InjectionToken"]('@ngrx/router-store Configuration');
+/** @type {?} */
+
+var DEFAULT_ROUTER_FEATURENAME = 'router';
+/**
+ * @param {?} config
+ * @return {?}
+ */
+
+function _createRouterConfig(config) {
+  return Object.assign({
+    stateKey: DEFAULT_ROUTER_FEATURENAME,
+    serializer: MinimalRouterStateSerializer,
+    navigationActionTiming: NavigationActionTiming.PreActivation
+  }, config);
+}
+/** @enum {number} */
+
+
+var RouterTrigger = {
+  NONE: 1,
+  ROUTER: 2,
+  STORE: 3
+};
+RouterTrigger[RouterTrigger.NONE] = 'NONE';
+RouterTrigger[RouterTrigger.ROUTER] = 'ROUTER';
+RouterTrigger[RouterTrigger.STORE] = 'STORE';
+/**
+ * Connects RouterModule with StoreModule.
+ *
+ * During the navigation, before any guards or resolvers run, the router will dispatch
+ * a ROUTER_NAVIGATION action, which has the following signature:
+ *
+ * ```
+ * export type RouterNavigationPayload = {
+ *   routerState: SerializedRouterStateSnapshot,
+ *   event: RoutesRecognized
+ * }
+ * ```
+ *
+ * Either a reducer or an effect can be invoked in response to this action.
+ * If the invoked reducer throws, the navigation will be canceled.
+ *
+ * If navigation gets canceled because of a guard, a ROUTER_CANCEL action will be
+ * dispatched. If navigation results in an error, a ROUTER_ERROR action will be dispatched.
+ *
+ * Both ROUTER_CANCEL and ROUTER_ERROR contain the store state before the navigation
+ * which can be used to restore the consistency of the store.
+ *
+ * Usage:
+ *
+ * ```typescript
+ * \@NgModule({
+ *   declarations: [AppCmp, SimpleCmp],
+ *   imports: [
+ *     BrowserModule,
+ *     StoreModule.forRoot(mapOfReducers),
+ *     RouterModule.forRoot([
+ *       { path: '', component: SimpleCmp },
+ *       { path: 'next', component: SimpleCmp }
+ *     ]),
+ *     StoreRouterConnectingModule.forRoot()
+ *   ],
+ *   bootstrap: [AppCmp]
+ * })
+ * export class AppModule {
+ * }
+ * ```
+ */
+
+var StoreRouterConnectingModule = /*#__PURE__*/function () {
+  /**
+   * @param {?} store
+   * @param {?} router
+   * @param {?} serializer
+   * @param {?} errorHandler
+   * @param {?} config
+   */
+  function StoreRouterConnectingModule(store, router, serializer, errorHandler, config) {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, StoreRouterConnectingModule);
+
+    this.store = store;
+    this.router = router;
+    this.serializer = serializer;
+    this.errorHandler = errorHandler;
+    this.config = config;
+    this.lastEvent = null;
+    this.routerState = null;
+    this.trigger = RouterTrigger.NONE;
+    this.stateKey =
+    /** @type {?} */
+    this.config.stateKey;
+    this.setUpStoreStateListener();
+    this.setUpRouterEventsListener();
+  }
+  /**
+   * @template T
+   * @param {?=} config
+   * @return {?}
+   */
+
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(StoreRouterConnectingModule, [{
+    key: "setUpStoreStateListener",
+
+    /**
+     * @private
+     * @return {?}
+     */
+    value: function setUpStoreStateListener() {
+      var _this3 = this;
+
+      this.store.pipe(Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["select"])(
+      /** @type {?} */
+      this.stateKey), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["withLatestFrom"])(this.store)).subscribe(
+      /**
+      * @param {?} __0
+      * @return {?}
+      */
+      function (_ref) {
+        var _ref2 = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref, 2),
+            routerStoreState = _ref2[0],
+            storeState = _ref2[1];
+
+        _this3.navigateIfNeeded(routerStoreState, storeState);
+      });
+    }
+    /**
+     * @private
+     * @param {?} routerStoreState
+     * @param {?} storeState
+     * @return {?}
+     */
+
+  }, {
+    key: "navigateIfNeeded",
+    value: function navigateIfNeeded(routerStoreState, storeState) {
+      var _this4 = this;
+
+      if (!routerStoreState || !routerStoreState.state) {
+        return;
+      }
+
+      if (this.trigger === RouterTrigger.ROUTER) {
+        return;
+      }
+
+      if (this.lastEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationStart"]) {
+        return;
+      }
+      /** @type {?} */
+
+
+      var url = routerStoreState.state.url;
+
+      if (this.router.url !== url) {
+        this.storeState = storeState;
+        this.trigger = RouterTrigger.STORE;
+        this.router.navigateByUrl(url).catch(
+        /**
+        * @param {?} error
+        * @return {?}
+        */
+        function (error) {
+          _this4.errorHandler.handleError(error);
+        });
+      }
+    }
+    /**
+     * @private
+     * @return {?}
+     */
+
+  }, {
+    key: "setUpRouterEventsListener",
+    value: function setUpRouterEventsListener() {
+      var _this5 = this;
+
+      /** @type {?} */
+      var dispatchNavLate = this.config.navigationActionTiming === NavigationActionTiming.PostActivation;
+      /** @type {?} */
+
+      var routesRecognized;
+      this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["withLatestFrom"])(this.store)).subscribe(
+      /**
+      * @param {?} __0
+      * @return {?}
+      */
+      function (_ref3) {
+        var _ref4 = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref3, 2),
+            event = _ref4[0],
+            storeState = _ref4[1];
+
+        _this5.lastEvent = event;
+
+        if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationStart"]) {
+          _this5.routerState = _this5.serializer.serialize(_this5.router.routerState.snapshot);
+
+          if (_this5.trigger !== RouterTrigger.STORE) {
+            _this5.storeState = storeState;
+
+            _this5.dispatchRouterRequest(event);
+          }
+        } else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["RoutesRecognized"]) {
+          routesRecognized = event;
+
+          if (!dispatchNavLate && _this5.trigger !== RouterTrigger.STORE) {
+            _this5.dispatchRouterNavigation(event);
+          }
+        } else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationCancel"]) {
+          _this5.dispatchRouterCancel(event);
+
+          _this5.reset();
+        } else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationError"]) {
+          _this5.dispatchRouterError(event);
+
+          _this5.reset();
+        } else if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationEnd"]) {
+          if (_this5.trigger !== RouterTrigger.STORE) {
+            if (dispatchNavLate) {
+              _this5.dispatchRouterNavigation(routesRecognized);
+            }
+
+            _this5.dispatchRouterNavigated(event);
+          }
+
+          _this5.reset();
+        }
+      });
+    }
+    /**
+     * @private
+     * @param {?} event
+     * @return {?}
+     */
+
+  }, {
+    key: "dispatchRouterRequest",
+    value: function dispatchRouterRequest(event) {
+      this.dispatchRouterAction(ROUTER_REQUEST, {
+        event: event
+      });
+    }
+    /**
+     * @private
+     * @param {?} lastRoutesRecognized
+     * @return {?}
+     */
+
+  }, {
+    key: "dispatchRouterNavigation",
+    value: function dispatchRouterNavigation(lastRoutesRecognized) {
+      /** @type {?} */
+      var nextRouterState = this.serializer.serialize(lastRoutesRecognized.state);
+      this.dispatchRouterAction(ROUTER_NAVIGATION, {
+        routerState: nextRouterState,
+        event: new _angular_router__WEBPACK_IMPORTED_MODULE_5__["RoutesRecognized"](lastRoutesRecognized.id, lastRoutesRecognized.url, lastRoutesRecognized.urlAfterRedirects, nextRouterState)
+      });
+    }
+    /**
+     * @private
+     * @param {?} event
+     * @return {?}
+     */
+
+  }, {
+    key: "dispatchRouterCancel",
+    value: function dispatchRouterCancel(event) {
+      this.dispatchRouterAction(ROUTER_CANCEL, {
+        storeState: this.storeState,
+        event: event
+      });
+    }
+    /**
+     * @private
+     * @param {?} event
+     * @return {?}
+     */
+
+  }, {
+    key: "dispatchRouterError",
+    value: function dispatchRouterError(event) {
+      this.dispatchRouterAction(ROUTER_ERROR, {
+        storeState: this.storeState,
+        event: new _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationError"](event.id, event.url, "".concat(event))
+      });
+    }
+    /**
+     * @private
+     * @param {?} event
+     * @return {?}
+     */
+
+  }, {
+    key: "dispatchRouterNavigated",
+    value: function dispatchRouterNavigated(event) {
+      /** @type {?} */
+      var routerState = this.serializer.serialize(this.router.routerState.snapshot);
+      this.dispatchRouterAction(ROUTER_NAVIGATED, {
+        event: event,
+        routerState: routerState
+      });
+    }
+    /**
+     * @private
+     * @param {?} type
+     * @param {?} payload
+     * @return {?}
+     */
+
+  }, {
+    key: "dispatchRouterAction",
+    value: function dispatchRouterAction(type, payload) {
+      this.trigger = RouterTrigger.ROUTER;
+
+      try {
+        this.store.dispatch({
+          type: type,
+          payload: Object.assign(Object.assign({
+            routerState: this.routerState
+          }, payload), {
+            event: this.config.routerState === 0
+            /* Full */
+            ? payload.event : {
+              id: payload.event.id,
+              url: payload.event.url
+            }
+          })
+        });
+      } finally {
+        this.trigger = RouterTrigger.NONE;
+      }
+    }
+    /**
+     * @private
+     * @return {?}
+     */
+
+  }, {
+    key: "reset",
+    value: function reset() {
+      this.trigger = RouterTrigger.NONE;
+      this.storeState = null;
+      this.routerState = null;
+    }
+  }], [{
+    key: "forRoot",
+    value: function forRoot() {
+      var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      return {
+        ngModule: StoreRouterConnectingModule,
+        providers: [{
+          provide: _ROUTER_CONFIG,
+          useValue: config
+        }, {
+          provide: ROUTER_CONFIG,
+          useFactory: _createRouterConfig,
+          deps: [_ROUTER_CONFIG]
+        }, {
+          provide: RouterStateSerializer,
+          useClass: config.serializer ? config.serializer : config.routerState === 0
+          /* Full */
+          ? DefaultRouterStateSerializer : MinimalRouterStateSerializer
+        }]
+      };
+    }
+  }]);
+
+  return StoreRouterConnectingModule;
+}();
+
+StoreRouterConnectingModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineNgModule"]({
+  type: StoreRouterConnectingModule
+});
+StoreRouterConnectingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineInjector"]({
+  factory: function StoreRouterConnectingModule_Factory(t) {
+    return new (t || StoreRouterConnectingModule)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](RouterStateSerializer), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_4__["ErrorHandler"]), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵinject"](ROUTER_CONFIG));
+  }
+});
+/** @nocollapse */
+
+StoreRouterConnectingModule.ctorParameters = function () {
+  return [{
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"]
+  }, {
+    type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
+  }, {
+    type: RouterStateSerializer
+  }, {
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ErrorHandler"]
+  }, {
+    type: undefined,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
+      args: [ROUTER_CONFIG]
+    }]
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵsetClassMetadata"](StoreRouterConnectingModule, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["NgModule"],
+    args: [{}]
+  }], function () {
+    return [{
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"]
+    }, {
+      type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
+    }, {
+      type: RouterStateSerializer
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["ErrorHandler"]
+    }, {
+      type: undefined,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_4__["Inject"],
+        args: [ROUTER_CONFIG]
+      }]
+    }];
+  }, null);
+})();
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/router_selectors.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @template V
+ * @param {?} selectState
+ * @return {?}
+ */
+
+
+function getSelectors(selectState) {
+  /** @type {?} */
+  var selectRouterState = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectState,
+  /**
+  * @param {?} router
+  * @return {?}
+  */
+  function (router) {
+    return router && router.state;
+  });
+  /** @type {?} */
+
+  var selectCurrentRoute = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectRouterState,
+  /**
+  * @param {?} routerState
+  * @return {?}
+  */
+  function (routerState) {
+    if (!routerState) {
+      return undefined;
+    }
+    /** @type {?} */
+
+
+    var route = routerState.root;
+
+    while (route.firstChild) {
+      route = route.firstChild;
+    }
+
+    return route;
+  });
+  /** @type {?} */
+
+  var selectQueryParams = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectCurrentRoute,
+  /**
+  * @param {?} route
+  * @return {?}
+  */
+  function (route) {
+    return route && route.queryParams;
+  });
+  /** @type {?} */
+
+  var selectQueryParam =
+  /**
+  * @param {?} param
+  * @return {?}
+  */
+  function selectQueryParam(param) {
+    return Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectQueryParams,
+    /**
+    * @param {?} params
+    * @return {?}
+    */
+    function (params) {
+      return params && params[param];
+    });
+  };
+  /** @type {?} */
+
+
+  var selectRouteParams = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectCurrentRoute,
+  /**
+  * @param {?} route
+  * @return {?}
+  */
+  function (route) {
+    return route && route.params;
+  });
+  /** @type {?} */
+
+  var selectRouteParam =
+  /**
+  * @param {?} param
+  * @return {?}
+  */
+  function selectRouteParam(param) {
+    return Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectRouteParams,
+    /**
+    * @param {?} params
+    * @return {?}
+    */
+    function (params) {
+      return params && params[param];
+    });
+  };
+  /** @type {?} */
+
+
+  var selectRouteData = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectCurrentRoute,
+  /**
+  * @param {?} route
+  * @return {?}
+  */
+  function (route) {
+    return route && route.data;
+  });
+  /** @type {?} */
+
+  var selectUrl = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_3__["createSelector"])(selectRouterState,
+  /**
+  * @param {?} routerState
+  * @return {?}
+  */
+  function (routerState) {
+    return routerState && routerState.url;
+  });
+  return {
+    selectCurrentRoute: selectCurrentRoute,
+    selectQueryParams: selectQueryParams,
+    selectQueryParam: selectQueryParam,
+    selectRouteParams: selectRouteParams,
+    selectRouteParam: selectRouteParam,
+    selectRouteData: selectRouteData,
+    selectUrl: selectUrl
+  };
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/src/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/router-store/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@ngrx/store-devtools/__ivy_ngcc__/fesm2015/store-devtools.js":
+/*!***********************************************************************************!*\
+  !*** ./node_modules/@ngrx/store-devtools/__ivy_ngcc__/fesm2015/store-devtools.js ***!
+  \***********************************************************************************/
+/*! exports provided: INITIAL_OPTIONS, RECOMPUTE, StoreDevtools, StoreDevtoolsConfig, StoreDevtoolsModule, ɵngrx_modules_store_devtools_store_devtools_a, ɵngrx_modules_store_devtools_store_devtools_b, ɵngrx_modules_store_devtools_store_devtools_c, ɵngrx_modules_store_devtools_store_devtools_d, ɵngrx_modules_store_devtools_store_devtools_e, ɵngrx_modules_store_devtools_store_devtools_f, ɵngrx_modules_store_devtools_store_devtools_g, ɵngrx_modules_store_devtools_store_devtools_h, ɵngrx_modules_store_devtools_store_devtools_i, ɵngrx_modules_store_devtools_store_devtools_j */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "INITIAL_OPTIONS", function() { return INITIAL_OPTIONS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECOMPUTE", function() { return RECOMPUTE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreDevtools", function() { return StoreDevtools; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreDevtoolsConfig", function() { return StoreDevtoolsConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StoreDevtoolsModule", function() { return StoreDevtoolsModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_a", function() { return IS_EXTENSION_OR_MONITOR_PRESENT; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_b", function() { return createIsExtensionOrMonitorPresent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_c", function() { return createReduxDevtoolsExtension; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_d", function() { return createStateObservable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_e", function() { return STORE_DEVTOOLS_CONFIG; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_f", function() { return noMonitor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_g", function() { return createConfig; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_h", function() { return REDUX_DEVTOOLS_EXTENSION; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_i", function() { return DevtoolsExtension; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ɵngrx_modules_store_devtools_store_devtools_j", function() { return DevtoolsDispatcher; });
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createSuper */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
+/* harmony import */ var _Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+
+
+
+
+
+
+
+/**
+ * @license NgRx 9.2.0
+ * (c) 2015-2018 Brandon Roberts, Mike Ryan, Rob Wormald, Victor Savkin
+ * License: MIT
+ */
+
+
+
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/config.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @record
+ */
+
+
+
+
+function DevToolsFeatureOptions() {}
+
+if (false) {}
+
+var StoreDevtoolsConfig = function StoreDevtoolsConfig() {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, StoreDevtoolsConfig);
+
+  this.maxAge = false;
+};
+
+if (false) {}
+/** @type {?} */
+
+
+var STORE_DEVTOOLS_CONFIG = new _angular_core__WEBPACK_IMPORTED_MODULE_6__["InjectionToken"]('@ngrx/devtools Options');
+/** @type {?} */
+
+var INITIAL_OPTIONS = new _angular_core__WEBPACK_IMPORTED_MODULE_6__["InjectionToken"]('@ngrx/devtools Initial Config');
+/**
+ * @return {?}
+ */
+
+function noMonitor() {
+  return null;
+}
+/** @type {?} */
+
+
+var DEFAULT_NAME = 'NgRx Store DevTools';
+/**
+ * @param {?} _options
+ * @return {?}
+ */
+
+function createConfig(_options) {
+  /** @type {?} */
+  var DEFAULT_OPTIONS = {
+    maxAge: false,
+    monitor: noMonitor,
+    actionSanitizer: undefined,
+    stateSanitizer: undefined,
+    name: DEFAULT_NAME,
+    serialize: false,
+    logOnly: false,
+    // Add all features explicitly. This prevent buggy behavior for
+    // options like "lock" which might otherwise not show up.
+    features: {
+      pause: true,
+      // start/pause recording of dispatched actions
+      lock: true,
+      // lock/unlock dispatching actions and side effects
+      persist: true,
+      // persist states on page reloading
+      export: true,
+      // export history of actions in a file
+      import: 'custom',
+      // import history of actions from a file
+      jump: true,
+      // jump back and forth (time travelling)
+      skip: true,
+      // skip (cancel) actions
+      reorder: true,
+      // drag and drop actions in the history list
+      dispatch: true,
+      // dispatch custom actions or action creators
+      test: true
+    }
+  };
+  /** @type {?} */
+
+  var options = typeof _options === 'function' ? _options() : _options;
+  /** @type {?} */
+
+  var logOnly = options.logOnly ? {
+    pause: true,
+    export: true,
+    test: true
+  } : false;
+  /** @type {?} */
+
+  var features = options.features || logOnly || DEFAULT_OPTIONS.features;
+  /** @type {?} */
+
+  var config = Object.assign({}, DEFAULT_OPTIONS, {
+    features: features
+  }, options);
+
+  if (config.maxAge && config.maxAge < 2) {
+    throw new Error("Devtools 'maxAge' cannot be less than 2, got ".concat(config.maxAge));
+  }
+
+  return config;
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/actions.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var PERFORM_ACTION = 'PERFORM_ACTION';
+/** @type {?} */
+
+var REFRESH = 'REFRESH';
+/** @type {?} */
+
+var RESET = 'RESET';
+/** @type {?} */
+
+var ROLLBACK = 'ROLLBACK';
+/** @type {?} */
+
+var COMMIT = 'COMMIT';
+/** @type {?} */
+
+var SWEEP = 'SWEEP';
+/** @type {?} */
+
+var TOGGLE_ACTION = 'TOGGLE_ACTION';
+/** @type {?} */
+
+var SET_ACTIONS_ACTIVE = 'SET_ACTIONS_ACTIVE';
+/** @type {?} */
+
+var JUMP_TO_STATE = 'JUMP_TO_STATE';
+/** @type {?} */
+
+var JUMP_TO_ACTION = 'JUMP_TO_ACTION';
+/** @type {?} */
+
+var IMPORT_STATE = 'IMPORT_STATE';
+/** @type {?} */
+
+var LOCK_CHANGES = 'LOCK_CHANGES';
+/** @type {?} */
+
+var PAUSE_RECORDING = 'PAUSE_RECORDING';
+
+var PerformAction =
+/**
+ * @param {?} action
+ * @param {?} timestamp
+ */
+function PerformAction(action, timestamp) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, PerformAction);
+
+  this.action = action;
+  this.timestamp = timestamp;
+  this.type = PERFORM_ACTION;
+
+  if (typeof action.type === 'undefined') {
+    throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+  }
+};
+
+if (false) {}
+
+var Refresh = function Refresh() {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Refresh);
+
+  this.type = REFRESH;
+};
+
+if (false) {}
+
+var Reset =
+/**
+ * @param {?} timestamp
+ */
+function Reset(timestamp) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Reset);
+
+  this.timestamp = timestamp;
+  this.type = RESET;
+};
+
+if (false) {}
+
+var Rollback =
+/**
+ * @param {?} timestamp
+ */
+function Rollback(timestamp) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Rollback);
+
+  this.timestamp = timestamp;
+  this.type = ROLLBACK;
+};
+
+if (false) {}
+
+var Commit =
+/**
+ * @param {?} timestamp
+ */
+function Commit(timestamp) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Commit);
+
+  this.timestamp = timestamp;
+  this.type = COMMIT;
+};
+
+if (false) {}
+
+var Sweep = function Sweep() {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, Sweep);
+
+  this.type = SWEEP;
+};
+
+if (false) {}
+
+var ToggleAction =
+/**
+ * @param {?} id
+ */
+function ToggleAction(id) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, ToggleAction);
+
+  this.id = id;
+  this.type = TOGGLE_ACTION;
+};
+
+if (false) {}
+
+var SetActionsActive =
+/**
+ * @param {?} start
+ * @param {?} end
+ * @param {?=} active
+ */
+function SetActionsActive(start, end) {
+  var active = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, SetActionsActive);
+
+  this.start = start;
+  this.end = end;
+  this.active = active;
+  this.type = SET_ACTIONS_ACTIVE;
+};
+
+if (false) {}
+
+var JumpToState =
+/**
+ * @param {?} index
+ */
+function JumpToState(index) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, JumpToState);
+
+  this.index = index;
+  this.type = JUMP_TO_STATE;
+};
+
+if (false) {}
+
+var JumpToAction =
+/**
+ * @param {?} actionId
+ */
+function JumpToAction(actionId) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, JumpToAction);
+
+  this.actionId = actionId;
+  this.type = JUMP_TO_ACTION;
+};
+
+if (false) {}
+
+var ImportState =
+/**
+ * @param {?} nextLiftedState
+ */
+function ImportState(nextLiftedState) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, ImportState);
+
+  this.nextLiftedState = nextLiftedState;
+  this.type = IMPORT_STATE;
+};
+
+if (false) {}
+
+var LockChanges =
+/**
+ * @param {?} status
+ */
+function LockChanges(status) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, LockChanges);
+
+  this.status = status;
+  this.type = LOCK_CHANGES;
+};
+
+if (false) {}
+
+var PauseRecording =
+/**
+ * @param {?} status
+ */
+function PauseRecording(status) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, PauseRecording);
+
+  this.status = status;
+  this.type = PAUSE_RECORDING;
+};
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/devtools-dispatcher.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+var DevtoolsDispatcher = /*#__PURE__*/function (_ActionsSubject) {
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_3__["default"])(DevtoolsDispatcher, _ActionsSubject);
+
+  var _super = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_4__["default"])(DevtoolsDispatcher);
+
+  function DevtoolsDispatcher() {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, DevtoolsDispatcher);
+
+    return _super.apply(this, arguments);
+  }
+
+  return DevtoolsDispatcher;
+}(_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ActionsSubject"]);
+
+DevtoolsDispatcher.ɵfac = function DevtoolsDispatcher_Factory(t) {
+  return ɵDevtoolsDispatcher_BaseFactory(t || DevtoolsDispatcher);
+};
+
+DevtoolsDispatcher.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjectable"]({
+  token: DevtoolsDispatcher,
+  factory: DevtoolsDispatcher.ɵfac
+});
+var ɵDevtoolsDispatcher_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵgetInheritedFactory"](DevtoolsDispatcher);
+/*@__PURE__*/
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵsetClassMetadata"](DevtoolsDispatcher, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Injectable"]
+  }], null, null);
+})();
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/utils.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @param {?} first
+ * @param {?} second
+ * @return {?}
+ */
+
+
+function difference(first, second) {
+  return first.filter(
+  /**
+  * @param {?} item
+  * @return {?}
+  */
+  function (item) {
+    return second.indexOf(item) < 0;
+  });
+}
+/**
+ * Provides an app's view into the state of the lifted store.
+ * @param {?} liftedState
+ * @return {?}
+ */
+
+
+function unliftState(liftedState) {
+  var computedStates = liftedState.computedStates,
+      currentStateIndex = liftedState.currentStateIndex; // At start up NgRx dispatches init actions,
+  // When these init actions are being filtered out by the predicate or safe/block list options
+  // we don't have a complete computed states yet.
+  // At this point it could happen that we're out of bounds, when this happens we fall back to the last known state
+
+  if (currentStateIndex >= computedStates.length) {
+    var _state = computedStates[computedStates.length - 1].state;
+    return _state;
+  }
+
+  var state = computedStates[currentStateIndex].state;
+  return state;
+}
+/**
+ * @param {?} liftedState
+ * @return {?}
+ */
+
+
+function unliftAction(liftedState) {
+  return liftedState.actionsById[liftedState.nextActionId - 1];
+}
+/**
+ * Lifts an app's action into an action on the lifted store.
+ * @param {?} action
+ * @return {?}
+ */
+
+
+function liftAction(action) {
+  return new PerformAction(action, +Date.now());
+}
+/**
+ * Sanitizes given actions with given function.
+ * @param {?} actionSanitizer
+ * @param {?} actions
+ * @return {?}
+ */
+
+
+function sanitizeActions(actionSanitizer, actions) {
+  return Object.keys(actions).reduce(
+  /**
+  * @param {?} sanitizedActions
+  * @param {?} actionIdx
+  * @return {?}
+  */
+  function (sanitizedActions, actionIdx) {
+    /** @type {?} */
+    var idx = Number(actionIdx);
+    sanitizedActions[idx] = sanitizeAction(actionSanitizer, actions[idx], idx);
+    return sanitizedActions;
+  },
+  /** @type {?} */
+  {});
+}
+/**
+ * Sanitizes given action with given function.
+ * @param {?} actionSanitizer
+ * @param {?} action
+ * @param {?} actionIdx
+ * @return {?}
+ */
+
+
+function sanitizeAction(actionSanitizer, action, actionIdx) {
+  return Object.assign(Object.assign({}, action), {
+    action: actionSanitizer(action.action, actionIdx)
+  });
+}
+/**
+ * Sanitizes given states with given function.
+ * @param {?} stateSanitizer
+ * @param {?} states
+ * @return {?}
+ */
+
+
+function sanitizeStates(stateSanitizer, states) {
+  return states.map(
+  /**
+  * @param {?} computedState
+  * @param {?} idx
+  * @return {?}
+  */
+  function (computedState, idx) {
+    return {
+      state: sanitizeState(stateSanitizer, computedState.state, idx),
+      error: computedState.error
+    };
+  });
+}
+/**
+ * Sanitizes given state with given function.
+ * @param {?} stateSanitizer
+ * @param {?} state
+ * @param {?} stateIdx
+ * @return {?}
+ */
+
+
+function sanitizeState(stateSanitizer, state, stateIdx) {
+  return stateSanitizer(state, stateIdx);
+}
+/**
+ * Read the config and tell if actions should be filtered
+ * @param {?} config
+ * @return {?}
+ */
+
+
+function shouldFilterActions(config) {
+  return config.predicate || config.actionsSafelist || config.actionsBlocklist;
+}
+/**
+ * Return a full filtered lifted state
+ * @param {?} liftedState
+ * @param {?=} predicate
+ * @param {?=} safelist
+ * @param {?=} blocklist
+ * @return {?}
+ */
+
+
+function filterLiftedState(liftedState, predicate, safelist, blocklist) {
+  /** @type {?} */
+  var filteredStagedActionIds = [];
+  /** @type {?} */
+
+  var filteredActionsById = {};
+  /** @type {?} */
+
+  var filteredComputedStates = [];
+  liftedState.stagedActionIds.forEach(
+  /**
+  * @param {?} id
+  * @param {?} idx
+  * @return {?}
+  */
+  function (id, idx) {
+    /** @type {?} */
+    var liftedAction = liftedState.actionsById[id];
+    if (!liftedAction) return;
+
+    if (idx && isActionFiltered(liftedState.computedStates[idx], liftedAction, predicate, safelist, blocklist)) {
+      return;
+    }
+
+    filteredActionsById[id] = liftedAction;
+    filteredStagedActionIds.push(id);
+    filteredComputedStates.push(liftedState.computedStates[idx]);
+  });
+  return Object.assign(Object.assign({}, liftedState), {
+    stagedActionIds: filteredStagedActionIds,
+    actionsById: filteredActionsById,
+    computedStates: filteredComputedStates
+  });
+}
+/**
+ * Return true is the action should be ignored
+ * @param {?} state
+ * @param {?} action
+ * @param {?=} predicate
+ * @param {?=} safelist
+ * @param {?=} blockedlist
+ * @return {?}
+ */
+
+
+function isActionFiltered(state, action, predicate, safelist, blockedlist) {
+  /** @type {?} */
+  var predicateMatch = predicate && !predicate(state, action.action);
+  /** @type {?} */
+
+  var safelistMatch = safelist && !action.action.type.match(safelist.map(
+  /**
+  * @param {?} s
+  * @return {?}
+  */
+  function (s) {
+    return escapeRegExp(s);
+  }).join('|'));
+  /** @type {?} */
+
+  var blocklistMatch = blockedlist && action.action.type.match(blockedlist.map(
+  /**
+  * @param {?} s
+  * @return {?}
+  */
+  function (s) {
+    return escapeRegExp(s);
+  }).join('|'));
+  return predicateMatch || safelistMatch || blocklistMatch;
+}
+/**
+ * Return string with escaped RegExp special characters
+ * https://stackoverflow.com/a/6969486/1337347
+ * @param {?} s
+ * @return {?}
+ */
+
+
+function escapeRegExp(s) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/extension.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var ExtensionActionTypes = {
+  START: 'START',
+  DISPATCH: 'DISPATCH',
+  STOP: 'STOP',
+  ACTION: 'ACTION'
+};
+/** @type {?} */
+
+var REDUX_DEVTOOLS_EXTENSION = new _angular_core__WEBPACK_IMPORTED_MODULE_6__["InjectionToken"]('Redux Devtools Extension');
+/**
+ * @record
+ */
+
+function ReduxDevtoolsExtensionConnection() {}
+
+if (false) {}
+/**
+ * @record
+ */
+
+
+function ReduxDevtoolsExtensionConfig() {}
+
+if (false) {}
+/**
+ * @record
+ */
+
+
+function ReduxDevtoolsExtension() {}
+
+if (false) {}
+
+var DevtoolsExtension = /*#__PURE__*/function () {
+  /**
+   * @param {?} devtoolsExtension
+   * @param {?} config
+   * @param {?} dispatcher
+   */
+  function DevtoolsExtension(devtoolsExtension, config, dispatcher) {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, DevtoolsExtension);
+
+    this.config = config;
+    this.dispatcher = dispatcher;
+    this.devtoolsExtension = devtoolsExtension;
+    this.createActionStreams();
+  }
+  /**
+   * @param {?} action
+   * @param {?} state
+   * @return {?}
+   */
+
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(DevtoolsExtension, [{
+    key: "notify",
+    value: function notify(action, state) {
+      var _this = this;
+
+      if (!this.devtoolsExtension) {
+        return;
+      } // Check to see if the action requires a full update of the liftedState.
+      // If it is a simple action generated by the user's app and the recording
+      // is not locked/paused, only send the action and the current state (fast).
+      //
+      // A full liftedState update (slow: serializes the entire liftedState) is
+      // only required when:
+      //   a) redux-devtools-extension fires the @@Init action (ignored by
+      //      @ngrx/store-devtools)
+      //   b) an action is generated by an @ngrx module (e.g. @ngrx/effects/init
+      //      or @ngrx/store/update-reducers)
+      //   c) the state has been recomputed due to time-traveling
+      //   d) any action that is not a PerformAction to err on the side of
+      //      caution.
+
+
+      if (action.type === PERFORM_ACTION) {
+        if (state.isLocked || state.isPaused) {
+          return;
+        }
+        /** @type {?} */
+
+
+        var currentState = unliftState(state);
+
+        if (shouldFilterActions(this.config) && isActionFiltered(currentState, action, this.config.predicate, this.config.actionsSafelist, this.config.actionsBlocklist)) {
+          return;
+        }
+        /** @type {?} */
+
+
+        var sanitizedState = this.config.stateSanitizer ? sanitizeState(this.config.stateSanitizer, currentState, state.currentStateIndex) : currentState;
+        /** @type {?} */
+
+        var sanitizedAction = this.config.actionSanitizer ? sanitizeAction(this.config.actionSanitizer, action, state.nextActionId) : action;
+        this.sendToReduxDevtools(
+        /**
+        * @return {?}
+        */
+        function () {
+          return _this.extensionConnection.send(sanitizedAction, sanitizedState);
+        });
+      } else {
+        // Requires full state update
+
+        /** @type {?} */
+        var sanitizedLiftedState = Object.assign(Object.assign({}, state), {
+          stagedActionIds: state.stagedActionIds,
+          actionsById: this.config.actionSanitizer ? sanitizeActions(this.config.actionSanitizer, state.actionsById) : state.actionsById,
+          computedStates: this.config.stateSanitizer ? sanitizeStates(this.config.stateSanitizer, state.computedStates) : state.computedStates
+        });
+        this.sendToReduxDevtools(
+        /**
+        * @return {?}
+        */
+        function () {
+          return _this.devtoolsExtension.send(null, sanitizedLiftedState, _this.getExtensionConfig(_this.config));
+        });
+      }
+    }
+    /**
+     * @private
+     * @return {?}
+     */
+
+  }, {
+    key: "createChangesObservable",
+    value: function createChangesObservable() {
+      var _this2 = this;
+
+      if (!this.devtoolsExtension) {
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["empty"])();
+      }
+
+      return new rxjs__WEBPACK_IMPORTED_MODULE_8__["Observable"](
+      /**
+      * @param {?} subscriber
+      * @return {?}
+      */
+      function (subscriber) {
+        /** @type {?} */
+        var connection = _this2.devtoolsExtension.connect(_this2.getExtensionConfig(_this2.config));
+
+        _this2.extensionConnection = connection;
+        connection.init();
+        connection.subscribe(
+        /**
+        * @param {?} change
+        * @return {?}
+        */
+        function (change) {
+          return subscriber.next(change);
+        });
+        return connection.unsubscribe;
+      });
+    }
+    /**
+     * @private
+     * @return {?}
+     */
+
+  }, {
+    key: "createActionStreams",
+    value: function createActionStreams() {
+      var _this3 = this;
+
+      // Listens to all changes
+
+      /** @type {?} */
+      var changes$ = this.createChangesObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["share"])()); // Listen for the start action
+
+      /** @type {?} */
+
+      var start$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["filter"])(
+      /**
+      * @param {?} change
+      * @return {?}
+      */
+      function (change) {
+        return change.type === ExtensionActionTypes.START;
+      })); // Listen for the stop action
+
+      /** @type {?} */
+
+      var stop$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["filter"])(
+      /**
+      * @param {?} change
+      * @return {?}
+      */
+      function (change) {
+        return change.type === ExtensionActionTypes.STOP;
+      })); // Listen for lifted actions
+
+      /** @type {?} */
+
+      var liftedActions$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["filter"])(
+      /**
+      * @param {?} change
+      * @return {?}
+      */
+      function (change) {
+        return change.type === ExtensionActionTypes.DISPATCH;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])(
+      /**
+      * @param {?} change
+      * @return {?}
+      */
+      function (change) {
+        return _this3.unwrapAction(change.payload);
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["concatMap"])(
+      /**
+      * @param {?} action
+      * @return {?}
+      */
+      function (action) {
+        if (action.type === IMPORT_STATE) {
+          // State imports may happen in two situations:
+          // 1. Explicitly by user
+          // 2. User activated the "persist state accross reloads" option
+          //    and now the state is imported during reload.
+          // Because of option 2, we need to give possible
+          // lazy loaded reducers time to instantiate.
+          // As soon as there is no UPDATE action within 1 second,
+          // it is assumed that all reducers are loaded.
+          return _this3.dispatcher.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["filter"])(
+          /**
+          * @param {?} action
+          * @return {?}
+          */
+          function (action) {
+            return action.type === _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["UPDATE"];
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["timeout"])(1000), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["debounceTime"])(1000), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])(
+          /**
+          * @return {?}
+          */
+          function () {
+            return action;
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["catchError"])(
+          /**
+          * @return {?}
+          */
+          function () {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(action);
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["take"])(1));
+        } else {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["of"])(action);
+        }
+      })); // Listen for unlifted actions
+
+      /** @type {?} */
+
+      var actions$ = changes$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["filter"])(
+      /**
+      * @param {?} change
+      * @return {?}
+      */
+      function (change) {
+        return change.type === ExtensionActionTypes.ACTION;
+      }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])(
+      /**
+      * @param {?} change
+      * @return {?}
+      */
+      function (change) {
+        return _this3.unwrapAction(change.payload);
+      }));
+      /** @type {?} */
+
+      var actionsUntilStop$ = actions$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["takeUntil"])(stop$));
+      /** @type {?} */
+
+      var liftedUntilStop$ = liftedActions$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["takeUntil"])(stop$));
+      this.start$ = start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["takeUntil"])(stop$)); // Only take the action sources between the start/stop events
+
+      this.actions$ = this.start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["switchMap"])(
+      /**
+      * @return {?}
+      */
+      function () {
+        return actionsUntilStop$;
+      }));
+      this.liftedActions$ = this.start$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["switchMap"])(
+      /**
+      * @return {?}
+      */
+      function () {
+        return liftedUntilStop$;
+      }));
+    }
+    /**
+     * @private
+     * @param {?} action
+     * @return {?}
+     */
+
+  }, {
+    key: "unwrapAction",
+    value: function unwrapAction(action) {
+      return typeof action === 'string' ? eval("(".concat(action, ")")) : action;
+    }
+    /**
+     * @private
+     * @param {?} config
+     * @return {?}
+     */
+
+  }, {
+    key: "getExtensionConfig",
+    value: function getExtensionConfig(config) {
+      /** @type {?} */
+      var extensionOptions = {
+        name: config.name,
+        features: config.features,
+        serialize: config.serialize
+      };
+
+      if (config.maxAge !== false
+      /* support === 0 */
+      ) {
+          extensionOptions.maxAge = config.maxAge;
+        }
+
+      return extensionOptions;
+    }
+    /**
+     * @private
+     * @param {?} send
+     * @return {?}
+     */
+
+  }, {
+    key: "sendToReduxDevtools",
+    value: function sendToReduxDevtools(send) {
+      try {
+        send();
+      } catch (err) {
+        console.warn('@ngrx/store-devtools: something went wrong inside the redux devtools', err);
+      }
+    }
+  }]);
+
+  return DevtoolsExtension;
+}();
+
+DevtoolsExtension.ɵfac = function DevtoolsExtension_Factory(t) {
+  return new (t || DevtoolsExtension)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](REDUX_DEVTOOLS_EXTENSION), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](STORE_DEVTOOLS_CONFIG), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](DevtoolsDispatcher));
+};
+
+DevtoolsExtension.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjectable"]({
+  token: DevtoolsExtension,
+  factory: DevtoolsExtension.ɵfac
+});
+/** @nocollapse */
+
+DevtoolsExtension.ctorParameters = function () {
+  return [{
+    type: undefined,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+      args: [REDUX_DEVTOOLS_EXTENSION]
+    }]
+  }, {
+    type: StoreDevtoolsConfig,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+      args: [STORE_DEVTOOLS_CONFIG]
+    }]
+  }, {
+    type: DevtoolsDispatcher
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵsetClassMetadata"](DevtoolsExtension, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Injectable"]
+  }], function () {
+    return [{
+      type: undefined,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+        args: [REDUX_DEVTOOLS_EXTENSION]
+      }]
+    }, {
+      type: StoreDevtoolsConfig,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+        args: [STORE_DEVTOOLS_CONFIG]
+      }]
+    }, {
+      type: DevtoolsDispatcher
+    }];
+  }, null);
+})();
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/reducer.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var INIT_ACTION = {
+  type: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["INIT"]
+};
+/** @type {?} */
+
+var RECOMPUTE =
+/** @type {?} */
+'@ngrx/store-devtools/recompute';
+/** @type {?} */
+
+var RECOMPUTE_ACTION = {
+  type: RECOMPUTE
+};
+/**
+ * @record
+ */
+
+function ComputedState() {}
+
+if (false) {}
+/**
+ * @record
+ */
+
+
+function LiftedAction() {}
+
+if (false) {}
+/**
+ * @record
+ */
+
+
+function LiftedActions() {}
+/**
+ * @record
+ */
+
+
+function LiftedState() {}
+
+if (false) {}
+/**
+ * Computes the next entry in the log by applying an action.
+ * @param {?} reducer
+ * @param {?} action
+ * @param {?} state
+ * @param {?} error
+ * @param {?} errorHandler
+ * @return {?}
+ */
+
+
+function computeNextEntry(reducer, action, state, error, errorHandler) {
+  if (error) {
+    return {
+      state: state,
+      error: 'Interrupted by an error up the chain'
+    };
+  }
+  /** @type {?} */
+
+
+  var nextState = state;
+  /** @type {?} */
+
+  var nextError;
+
+  try {
+    nextState = reducer(state, action);
+  } catch (err) {
+    nextError = err.toString();
+    errorHandler.handleError(err.stack || err);
+  }
+
+  return {
+    state: nextState,
+    error: nextError
+  };
+}
+/**
+ * Runs the reducer on invalidated actions to get a fresh computation log.
+ * @param {?} computedStates
+ * @param {?} minInvalidatedStateIndex
+ * @param {?} reducer
+ * @param {?} committedState
+ * @param {?} actionsById
+ * @param {?} stagedActionIds
+ * @param {?} skippedActionIds
+ * @param {?} errorHandler
+ * @param {?} isPaused
+ * @return {?}
+ */
+
+
+function recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused) {
+  // Optimization: exit early and return the same reference
+  // if we know nothing could have changed.
+  if (minInvalidatedStateIndex >= computedStates.length && computedStates.length === stagedActionIds.length) {
+    return computedStates;
+  }
+  /** @type {?} */
+
+
+  var nextComputedStates = computedStates.slice(0, minInvalidatedStateIndex); // If the recording is paused, recompute all states up until the pause state,
+  // else recompute all states.
+
+  /** @type {?} */
+
+  var lastIncludedActionId = stagedActionIds.length - (isPaused ? 1 : 0);
+
+  for (var i = minInvalidatedStateIndex; i < lastIncludedActionId; i++) {
+    /** @type {?} */
+    var actionId = stagedActionIds[i];
+    /** @type {?} */
+
+    var action = actionsById[actionId].action;
+    /** @type {?} */
+
+    var previousEntry = nextComputedStates[i - 1];
+    /** @type {?} */
+
+    var previousState = previousEntry ? previousEntry.state : committedState;
+    /** @type {?} */
+
+    var previousError = previousEntry ? previousEntry.error : undefined;
+    /** @type {?} */
+
+    var shouldSkip = skippedActionIds.indexOf(actionId) > -1;
+    /** @type {?} */
+
+    var entry = shouldSkip ? previousEntry : computeNextEntry(reducer, action, previousState, previousError, errorHandler);
+    nextComputedStates.push(entry);
+  } // If the recording is paused, the last state will not be recomputed,
+  // because it's essentially not part of the state history.
+
+
+  if (isPaused) {
+    nextComputedStates.push(computedStates[computedStates.length - 1]);
+  }
+
+  return nextComputedStates;
+}
+/**
+ * @param {?=} initialCommittedState
+ * @param {?=} monitorReducer
+ * @return {?}
+ */
+
+
+function liftInitialState(initialCommittedState, monitorReducer) {
+  return {
+    monitorState: monitorReducer(undefined, {}),
+    nextActionId: 1,
+    actionsById: {
+      0: liftAction(INIT_ACTION)
+    },
+    stagedActionIds: [0],
+    skippedActionIds: [],
+    committedState: initialCommittedState,
+    currentStateIndex: 0,
+    computedStates: [],
+    isLocked: false,
+    isPaused: false
+  };
+}
+/**
+ * Creates a history state reducer from an app's reducer.
+ * @param {?} initialCommittedState
+ * @param {?} initialLiftedState
+ * @param {?} errorHandler
+ * @param {?=} monitorReducer
+ * @param {?=} options
+ * @return {?}
+ */
+
+
+function liftReducerWith(initialCommittedState, initialLiftedState, errorHandler, monitorReducer) {
+  var options = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : {};
+
+  /**
+   * Manages how the history actions modify the history state.
+   */
+  return (
+    /**
+    * @param {?} reducer
+    * @return {?}
+    */
+    function (reducer) {
+      return (
+        /**
+        * @param {?} liftedState
+        * @param {?} liftedAction
+        * @return {?}
+        */
+        function (liftedState, liftedAction) {
+          var _ref = liftedState || initialLiftedState,
+              monitorState = _ref.monitorState,
+              actionsById = _ref.actionsById,
+              nextActionId = _ref.nextActionId,
+              stagedActionIds = _ref.stagedActionIds,
+              skippedActionIds = _ref.skippedActionIds,
+              committedState = _ref.committedState,
+              currentStateIndex = _ref.currentStateIndex,
+              computedStates = _ref.computedStates,
+              isLocked = _ref.isLocked,
+              isPaused = _ref.isPaused;
+
+          if (!liftedState) {
+            // Prevent mutating initialLiftedState
+            actionsById = Object.create(actionsById);
+          }
+          /**
+           * @param {?} n
+           * @return {?}
+           */
+
+
+          function commitExcessActions(n) {
+            // Auto-commits n-number of excess actions.
+
+            /** @type {?} */
+            var excess = n;
+            /** @type {?} */
+
+            var idsToDelete = stagedActionIds.slice(1, excess + 1);
+
+            for (var i = 0; i < idsToDelete.length; i++) {
+              if (computedStates[i + 1].error) {
+                // Stop if error is found. Commit actions up to error.
+                excess = i;
+                idsToDelete = stagedActionIds.slice(1, excess + 1);
+                break;
+              } else {
+                delete actionsById[idsToDelete[i]];
+              }
+            }
+
+            skippedActionIds = skippedActionIds.filter(
+            /**
+            * @param {?} id
+            * @return {?}
+            */
+            function (id) {
+              return idsToDelete.indexOf(id) === -1;
+            });
+            stagedActionIds = [0].concat(Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(stagedActionIds.slice(excess + 1)));
+            committedState = computedStates[excess].state;
+            computedStates = computedStates.slice(excess);
+            currentStateIndex = currentStateIndex > excess ? currentStateIndex - excess : 0;
+          }
+          /**
+           * @return {?}
+           */
+
+
+          function commitChanges() {
+            // Consider the last committed state the new starting point.
+            // Squash any staged actions into a single committed state.
+            actionsById = {
+              0: liftAction(INIT_ACTION)
+            };
+            nextActionId = 1;
+            stagedActionIds = [0];
+            skippedActionIds = [];
+            committedState = computedStates[currentStateIndex].state;
+            currentStateIndex = 0;
+            computedStates = [];
+          } // By default, aggressively recompute every state whatever happens.
+          // This has O(n) performance, so we'll override this to a sensible
+          // value whenever we feel like we don't have to recompute the states.
+
+          /** @type {?} */
+
+
+          var minInvalidatedStateIndex = 0;
+
+          switch (liftedAction.type) {
+            case LOCK_CHANGES:
+              {
+                isLocked = liftedAction.status;
+                minInvalidatedStateIndex = Infinity;
+                break;
+              }
+
+            case PAUSE_RECORDING:
+              {
+                isPaused = liftedAction.status;
+
+                if (isPaused) {
+                  // Add a pause action to signal the devtools-user the recording is paused.
+                  // The corresponding state will be overwritten on each update to always contain
+                  // the latest state (see Actions.PERFORM_ACTION).
+                  stagedActionIds = [].concat(Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(stagedActionIds), [nextActionId]);
+                  actionsById[nextActionId] = new PerformAction({
+                    type: '@ngrx/devtools/pause'
+                  }, +Date.now());
+                  nextActionId++;
+                  minInvalidatedStateIndex = stagedActionIds.length - 1;
+                  computedStates = computedStates.concat(computedStates[computedStates.length - 1]);
+
+                  if (currentStateIndex === stagedActionIds.length - 2) {
+                    currentStateIndex++;
+                  }
+
+                  minInvalidatedStateIndex = Infinity;
+                } else {
+                  commitChanges();
+                }
+
+                break;
+              }
+
+            case RESET:
+              {
+                // Get back to the state the store was created with.
+                actionsById = {
+                  0: liftAction(INIT_ACTION)
+                };
+                nextActionId = 1;
+                stagedActionIds = [0];
+                skippedActionIds = [];
+                committedState = initialCommittedState;
+                currentStateIndex = 0;
+                computedStates = [];
+                break;
+              }
+
+            case COMMIT:
+              {
+                commitChanges();
+                break;
+              }
+
+            case ROLLBACK:
+              {
+                // Forget about any staged actions.
+                // Start again from the last committed state.
+                actionsById = {
+                  0: liftAction(INIT_ACTION)
+                };
+                nextActionId = 1;
+                stagedActionIds = [0];
+                skippedActionIds = [];
+                currentStateIndex = 0;
+                computedStates = [];
+                break;
+              }
+
+            case TOGGLE_ACTION:
+              {
+                // Toggle whether an action with given ID is skipped.
+                // Being skipped means it is a no-op during the computation.
+                var actionId = liftedAction.id;
+                /** @type {?} */
+
+                var index = skippedActionIds.indexOf(actionId);
+
+                if (index === -1) {
+                  skippedActionIds = [actionId].concat(Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(skippedActionIds));
+                } else {
+                  skippedActionIds = skippedActionIds.filter(
+                  /**
+                  * @param {?} id
+                  * @return {?}
+                  */
+                  function (id) {
+                    return id !== actionId;
+                  });
+                } // Optimization: we know history before this action hasn't changed
+
+
+                minInvalidatedStateIndex = stagedActionIds.indexOf(actionId);
+                break;
+              }
+
+            case SET_ACTIONS_ACTIVE:
+              {
+                // Toggle whether an action with given ID is skipped.
+                // Being skipped means it is a no-op during the computation.
+                var start = liftedAction.start,
+                    end = liftedAction.end,
+                    active = liftedAction.active;
+                /** @type {?} */
+
+                var actionIds = [];
+
+                for (var i = start; i < end; i++) {
+                  actionIds.push(i);
+                }
+
+                if (active) {
+                  skippedActionIds = difference(skippedActionIds, actionIds);
+                } else {
+                  skippedActionIds = [].concat(Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(skippedActionIds), actionIds);
+                } // Optimization: we know history before this action hasn't changed
+
+
+                minInvalidatedStateIndex = stagedActionIds.indexOf(start);
+                break;
+              }
+
+            case JUMP_TO_STATE:
+              {
+                // Without recomputing anything, move the pointer that tell us
+                // which state is considered the current one. Useful for sliders.
+                currentStateIndex = liftedAction.index; // Optimization: we know the history has not changed.
+
+                minInvalidatedStateIndex = Infinity;
+                break;
+              }
+
+            case JUMP_TO_ACTION:
+              {
+                // Jumps to a corresponding state to a specific action.
+                // Useful when filtering actions.
+
+                /** @type {?} */
+                var _index = stagedActionIds.indexOf(liftedAction.actionId);
+
+                if (_index !== -1) currentStateIndex = _index;
+                minInvalidatedStateIndex = Infinity;
+                break;
+              }
+
+            case SWEEP:
+              {
+                // Forget any actions that are currently being skipped.
+                stagedActionIds = difference(stagedActionIds, skippedActionIds);
+                skippedActionIds = [];
+                currentStateIndex = Math.min(currentStateIndex, stagedActionIds.length - 1);
+                break;
+              }
+
+            case PERFORM_ACTION:
+              {
+                // Ignore action and return state as is if recording is locked
+                if (isLocked) {
+                  return liftedState || initialLiftedState;
+                }
+
+                if (isPaused || liftedState && isActionFiltered(liftedState.computedStates[currentStateIndex], liftedAction, options.predicate, options.actionsSafelist, options.actionsBlocklist)) {
+                  // If recording is paused or if the action should be ignored, overwrite the last state
+                  // (corresponds to the pause action) and keep everything else as is.
+                  // This way, the app gets the new current state while the devtools
+                  // do not record another action.
+
+                  /** @type {?} */
+                  var lastState = computedStates[computedStates.length - 1];
+                  computedStates = [].concat(Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(computedStates.slice(0, -1)), [computeNextEntry(reducer, liftedAction.action, lastState.state, lastState.error, errorHandler)]);
+                  minInvalidatedStateIndex = Infinity;
+                  break;
+                } // Auto-commit as new actions come in.
+
+
+                if (options.maxAge && stagedActionIds.length === options.maxAge) {
+                  commitExcessActions(1);
+                }
+
+                if (currentStateIndex === stagedActionIds.length - 1) {
+                  currentStateIndex++;
+                }
+                /** @type {?} */
+
+
+                var _actionId = nextActionId++; // Mutation! This is the hottest path, and we optimize on purpose.
+                // It is safe because we set a new key in a cache dictionary.
+
+
+                actionsById[_actionId] = liftedAction;
+                stagedActionIds = [].concat(Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(stagedActionIds), [_actionId]); // Optimization: we know that only the new action needs computing.
+
+                minInvalidatedStateIndex = stagedActionIds.length - 1;
+                break;
+              }
+
+            case IMPORT_STATE:
+              {
+                // Completely replace everything.
+                var _liftedAction$nextLif = liftedAction.nextLiftedState;
+                monitorState = _liftedAction$nextLif.monitorState;
+                actionsById = _liftedAction$nextLif.actionsById;
+                nextActionId = _liftedAction$nextLif.nextActionId;
+                stagedActionIds = _liftedAction$nextLif.stagedActionIds;
+                skippedActionIds = _liftedAction$nextLif.skippedActionIds;
+                committedState = _liftedAction$nextLif.committedState;
+                currentStateIndex = _liftedAction$nextLif.currentStateIndex;
+                computedStates = _liftedAction$nextLif.computedStates;
+                isLocked = _liftedAction$nextLif.isLocked;
+                isPaused = _liftedAction$nextLif.isPaused;
+                break;
+              }
+
+            case _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["INIT"]:
+              {
+                // Always recompute states on hot reload and init.
+                minInvalidatedStateIndex = 0;
+
+                if (options.maxAge && stagedActionIds.length > options.maxAge) {
+                  // States must be recomputed before committing excess.
+                  computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+                  commitExcessActions(stagedActionIds.length - options.maxAge); // Avoid double computation.
+
+                  minInvalidatedStateIndex = Infinity;
+                }
+
+                break;
+              }
+
+            case _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["UPDATE"]:
+              {
+                /** @type {?} */
+                var stateHasErrors = computedStates.filter(
+                /**
+                * @param {?} state
+                * @return {?}
+                */
+                function (state) {
+                  return state.error;
+                }).length > 0;
+
+                if (stateHasErrors) {
+                  // Recompute all states
+                  minInvalidatedStateIndex = 0;
+
+                  if (options.maxAge && stagedActionIds.length > options.maxAge) {
+                    // States must be recomputed before committing excess.
+                    computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+                    commitExcessActions(stagedActionIds.length - options.maxAge); // Avoid double computation.
+
+                    minInvalidatedStateIndex = Infinity;
+                  }
+                } else {
+                  // If not paused/locked, add a new action to signal devtools-user
+                  // that there was a reducer update.
+                  if (!isPaused && !isLocked) {
+                    if (currentStateIndex === stagedActionIds.length - 1) {
+                      currentStateIndex++;
+                    } // Add a new action to only recompute state
+
+                    /** @type {?} */
+
+
+                    var _actionId2 = nextActionId++;
+
+                    actionsById[_actionId2] = new PerformAction(liftedAction, +Date.now());
+                    stagedActionIds = [].concat(Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(stagedActionIds), [_actionId2]);
+                    minInvalidatedStateIndex = stagedActionIds.length - 1;
+                    computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+                  } // Recompute state history with latest reducer and update action
+
+
+                  computedStates = computedStates.map(
+                  /**
+                  * @param {?} cmp
+                  * @return {?}
+                  */
+                  function (cmp) {
+                    return Object.assign(Object.assign({}, cmp), {
+                      state: reducer(cmp.state, RECOMPUTE_ACTION)
+                    });
+                  });
+                  currentStateIndex = stagedActionIds.length - 1;
+
+                  if (options.maxAge && stagedActionIds.length > options.maxAge) {
+                    commitExcessActions(stagedActionIds.length - options.maxAge);
+                  } // Avoid double computation.
+
+
+                  minInvalidatedStateIndex = Infinity;
+                }
+
+                break;
+              }
+
+            default:
+              {
+                // If the action is not recognized, it's a monitor action.
+                // Optimization: a monitor action can't change history.
+                minInvalidatedStateIndex = Infinity;
+                break;
+              }
+          }
+
+          computedStates = recomputeStates(computedStates, minInvalidatedStateIndex, reducer, committedState, actionsById, stagedActionIds, skippedActionIds, errorHandler, isPaused);
+          monitorState = monitorReducer(monitorState, liftedAction);
+          return {
+            monitorState: monitorState,
+            actionsById: actionsById,
+            nextActionId: nextActionId,
+            stagedActionIds: stagedActionIds,
+            skippedActionIds: skippedActionIds,
+            committedState: committedState,
+            currentStateIndex: currentStateIndex,
+            computedStates: computedStates,
+            isLocked: isLocked,
+            isPaused: isPaused
+          };
+        }
+      );
+    }
+  );
+}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/devtools.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+
+var StoreDevtools = /*#__PURE__*/function () {
+  /**
+   * @param {?} dispatcher
+   * @param {?} actions$
+   * @param {?} reducers$
+   * @param {?} extension
+   * @param {?} scannedActions
+   * @param {?} errorHandler
+   * @param {?} initialState
+   * @param {?} config
+   */
+  function StoreDevtools(dispatcher, actions$, reducers$, extension, scannedActions, errorHandler, initialState, config) {
+    var _this4 = this;
+
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, StoreDevtools);
+
+    /** @type {?} */
+    var liftedInitialState = liftInitialState(initialState, config.monitor);
+    /** @type {?} */
+
+    var liftReducer = liftReducerWith(initialState, liftedInitialState, errorHandler, config.monitor, config);
+    /** @type {?} */
+
+    var liftedAction$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["merge"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_8__["merge"])(actions$.asObservable().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["skip"])(1)), extension.actions$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])(liftAction)), dispatcher, extension.liftedActions$).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["observeOn"])(rxjs__WEBPACK_IMPORTED_MODULE_8__["queueScheduler"]));
+    /** @type {?} */
+
+    var liftedReducer$ = reducers$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])(liftReducer));
+    /** @type {?} */
+
+    var liftedStateSubject = new rxjs__WEBPACK_IMPORTED_MODULE_8__["ReplaySubject"](1);
+    /** @type {?} */
+
+    var liftedStateSubscription = liftedAction$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["withLatestFrom"])(liftedReducer$), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["scan"])(
+    /**
+    * @param {?} __0
+    * @param {?} __1
+    * @return {?}
+    */
+    function (_ref2, _ref3) {
+      var liftedState = _ref2.state;
+
+      var _ref4 = Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_ref3, 2),
+          action = _ref4[0],
+          reducer = _ref4[1];
+
+      /** @type {?} */
+      var reducedLiftedState = reducer(liftedState, action); // On full state update
+      // If we have actions filters, we must filter completely our lifted state to be sync with the extension
+
+      if (action.type !== PERFORM_ACTION && shouldFilterActions(config)) {
+        reducedLiftedState = filterLiftedState(reducedLiftedState, config.predicate, config.actionsSafelist, config.actionsBlocklist);
+      } // Extension should be sent the sanitized lifted state
+
+
+      extension.notify(action, reducedLiftedState);
+      return {
+        state: reducedLiftedState,
+        action: action
+      };
+    }, {
+      state: liftedInitialState,
+      action:
+      /** @type {?} */
+      null
+    })).subscribe(
+    /**
+    * @param {?} __0
+    * @return {?}
+    */
+    function (_ref5) {
+      var state = _ref5.state,
+          action = _ref5.action;
+      liftedStateSubject.next(state);
+
+      if (action.type === PERFORM_ACTION) {
+        /** @type {?} */
+        var unliftedAction =
+        /** @type {?} */
+        action.action;
+        scannedActions.next(unliftedAction);
+      }
+    });
+    /** @type {?} */
+
+    var extensionStartSubscription = extension.start$.subscribe(
+    /**
+    * @return {?}
+    */
+    function () {
+      _this4.refresh();
+    });
+    /** @type {?} */
+
+    var liftedState$ =
+    /** @type {?} */
+    liftedStateSubject.asObservable();
+    /** @type {?} */
+
+    var state$ = liftedState$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_9__["map"])(unliftState));
+    this.extensionStartSubscription = extensionStartSubscription;
+    this.stateSubscription = liftedStateSubscription;
+    this.dispatcher = dispatcher;
+    this.liftedState = liftedState$;
+    this.state = state$;
+  }
+  /**
+   * @param {?} action
+   * @return {?}
+   */
+
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(StoreDevtools, [{
+    key: "dispatch",
+    value: function dispatch(action) {
+      this.dispatcher.next(action);
+    }
+    /**
+     * @param {?} action
+     * @return {?}
+     */
+
+  }, {
+    key: "next",
+    value: function next(action) {
+      this.dispatcher.next(action);
+    }
+    /**
+     * @param {?} error
+     * @return {?}
+     */
+
+  }, {
+    key: "error",
+    value: function error(_error) {}
+    /**
+     * @return {?}
+     */
+
+  }, {
+    key: "complete",
+    value: function complete() {}
+    /**
+     * @param {?} action
+     * @return {?}
+     */
+
+  }, {
+    key: "performAction",
+    value: function performAction(action) {
+      this.dispatch(new PerformAction(action, +Date.now()));
+    }
+    /**
+     * @return {?}
+     */
+
+  }, {
+    key: "refresh",
+    value: function refresh() {
+      this.dispatch(new Refresh());
+    }
+    /**
+     * @return {?}
+     */
+
+  }, {
+    key: "reset",
+    value: function reset() {
+      this.dispatch(new Reset(+Date.now()));
+    }
+    /**
+     * @return {?}
+     */
+
+  }, {
+    key: "rollback",
+    value: function rollback() {
+      this.dispatch(new Rollback(+Date.now()));
+    }
+    /**
+     * @return {?}
+     */
+
+  }, {
+    key: "commit",
+    value: function commit() {
+      this.dispatch(new Commit(+Date.now()));
+    }
+    /**
+     * @return {?}
+     */
+
+  }, {
+    key: "sweep",
+    value: function sweep() {
+      this.dispatch(new Sweep());
+    }
+    /**
+     * @param {?} id
+     * @return {?}
+     */
+
+  }, {
+    key: "toggleAction",
+    value: function toggleAction(id) {
+      this.dispatch(new ToggleAction(id));
+    }
+    /**
+     * @param {?} actionId
+     * @return {?}
+     */
+
+  }, {
+    key: "jumpToAction",
+    value: function jumpToAction(actionId) {
+      this.dispatch(new JumpToAction(actionId));
+    }
+    /**
+     * @param {?} index
+     * @return {?}
+     */
+
+  }, {
+    key: "jumpToState",
+    value: function jumpToState(index) {
+      this.dispatch(new JumpToState(index));
+    }
+    /**
+     * @param {?} nextLiftedState
+     * @return {?}
+     */
+
+  }, {
+    key: "importState",
+    value: function importState(nextLiftedState) {
+      this.dispatch(new ImportState(nextLiftedState));
+    }
+    /**
+     * @param {?} status
+     * @return {?}
+     */
+
+  }, {
+    key: "lockChanges",
+    value: function lockChanges(status) {
+      this.dispatch(new LockChanges(status));
+    }
+    /**
+     * @param {?} status
+     * @return {?}
+     */
+
+  }, {
+    key: "pauseRecording",
+    value: function pauseRecording(status) {
+      this.dispatch(new PauseRecording(status));
+    }
+  }]);
+
+  return StoreDevtools;
+}();
+
+StoreDevtools.ɵfac = function StoreDevtools_Factory(t) {
+  return new (t || StoreDevtools)(_angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](DevtoolsDispatcher), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ActionsSubject"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ReducerObservable"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](DevtoolsExtension), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ScannedActionsSubject"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_6__["ErrorHandler"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["INITIAL_STATE"]), _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵinject"](STORE_DEVTOOLS_CONFIG));
+};
+
+StoreDevtools.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjectable"]({
+  token: StoreDevtools,
+  factory: StoreDevtools.ɵfac
+});
+/** @nocollapse */
+
+StoreDevtools.ctorParameters = function () {
+  return [{
+    type: DevtoolsDispatcher
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ActionsSubject"]
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ReducerObservable"]
+  }, {
+    type: DevtoolsExtension
+  }, {
+    type: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ScannedActionsSubject"]
+  }, {
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["ErrorHandler"]
+  }, {
+    type: undefined,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+      args: [_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["INITIAL_STATE"]]
+    }]
+  }, {
+    type: StoreDevtoolsConfig,
+    decorators: [{
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+      args: [STORE_DEVTOOLS_CONFIG]
+    }]
+  }];
+};
+/*@__PURE__*/
+
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵsetClassMetadata"](StoreDevtools, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Injectable"]
+  }], function () {
+    return [{
+      type: DevtoolsDispatcher
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ActionsSubject"]
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ReducerObservable"]
+    }, {
+      type: DevtoolsExtension
+    }, {
+      type: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ScannedActionsSubject"]
+    }, {
+      type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["ErrorHandler"]
+    }, {
+      type: undefined,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+        args: [_ngrx_store__WEBPACK_IMPORTED_MODULE_7__["INITIAL_STATE"]]
+      }]
+    }, {
+      type: StoreDevtoolsConfig,
+      decorators: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["Inject"],
+        args: [STORE_DEVTOOLS_CONFIG]
+      }]
+    }];
+  }, null);
+})();
+
+if (false) {}
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/instrument.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/** @type {?} */
+
+
+var IS_EXTENSION_OR_MONITOR_PRESENT = new _angular_core__WEBPACK_IMPORTED_MODULE_6__["InjectionToken"]('Is Devtools Extension or Monitor Present');
+/**
+ * @param {?} extension
+ * @param {?} config
+ * @return {?}
+ */
+
+function createIsExtensionOrMonitorPresent(extension, config) {
+  return Boolean(extension) || config.monitor !== noMonitor;
+}
+/**
+ * @return {?}
+ */
+
+
+function createReduxDevtoolsExtension() {
+  /** @type {?} */
+  var extensionKey = '__REDUX_DEVTOOLS_EXTENSION__';
+
+  if (typeof window === 'object' && typeof
+  /** @type {?} */
+  window[extensionKey] !== 'undefined') {
+    return (
+      /** @type {?} */
+      window[extensionKey]
+    );
+  } else {
+    return null;
+  }
+}
+/**
+ * @param {?} devtools
+ * @return {?}
+ */
+
+
+function createStateObservable(devtools) {
+  return devtools.state;
+}
+
+var StoreDevtoolsModule = /*#__PURE__*/function () {
+  function StoreDevtoolsModule() {
+    Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_5__["default"])(this, StoreDevtoolsModule);
+  }
+
+  Object(_Users_mansishah_Desktop_Github_RecSho_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(StoreDevtoolsModule, null, [{
+    key: "instrument",
+
+    /**
+     * @param {?=} options
+     * @return {?}
+     */
+    value: function instrument() {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      return {
+        ngModule: StoreDevtoolsModule,
+        providers: [DevtoolsExtension, DevtoolsDispatcher, StoreDevtools, {
+          provide: INITIAL_OPTIONS,
+          useValue: options
+        }, {
+          provide: IS_EXTENSION_OR_MONITOR_PRESENT,
+          deps: [REDUX_DEVTOOLS_EXTENSION, STORE_DEVTOOLS_CONFIG],
+          useFactory: createIsExtensionOrMonitorPresent
+        }, {
+          provide: REDUX_DEVTOOLS_EXTENSION,
+          useFactory: createReduxDevtoolsExtension
+        }, {
+          provide: STORE_DEVTOOLS_CONFIG,
+          deps: [INITIAL_OPTIONS],
+          useFactory: createConfig
+        }, {
+          provide: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["StateObservable"],
+          deps: [StoreDevtools],
+          useFactory: createStateObservable
+        }, {
+          provide: _ngrx_store__WEBPACK_IMPORTED_MODULE_7__["ReducerManagerDispatcher"],
+          useExisting: DevtoolsDispatcher
+        }]
+      };
+    }
+  }]);
+
+  return StoreDevtoolsModule;
+}();
+
+StoreDevtoolsModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineNgModule"]({
+  type: StoreDevtoolsModule
+});
+StoreDevtoolsModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵɵdefineInjector"]({
+  factory: function StoreDevtoolsModule_Factory(t) {
+    return new (t || StoreDevtoolsModule)();
+  }
+});
+/*@__PURE__*/
+
+(function () {
+  _angular_core__WEBPACK_IMPORTED_MODULE_6__["ɵsetClassMetadata"](StoreDevtoolsModule, [{
+    type: _angular_core__WEBPACK_IMPORTED_MODULE_6__["NgModule"],
+    args: [{}]
+  }], null, null);
+})();
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/src/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/public_api.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * @fileoverview added by tsickle
+ * Generated from: modules/store-devtools/index.ts
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+
+
+
+/***/ }),
+
 /***/ "./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/@ngrx/store/__ivy_ngcc__/fesm2015/store.js ***!

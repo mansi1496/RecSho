@@ -273,7 +273,9 @@ var ShoppingListModule = /** @class */ (function () {
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild([{ path: '', component: _shopping_list_component__WEBPACK_IMPORTED_MODULE_3__["ShoppingListComponent"] }]),
                 _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"]
-            ]] });
+            ]
+            // providers: [LoggingService]
+        ] });
     return ShoppingListModule;
 }());
 
@@ -286,7 +288,8 @@ var ShoppingListModule = /** @class */ (function () {
                     _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                     _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forChild([{ path: '', component: _shopping_list_component__WEBPACK_IMPORTED_MODULE_3__["ShoppingListComponent"] }]),
                     _shared_shared_module__WEBPACK_IMPORTED_MODULE_5__["SharedModule"]
-                ],
+                ]
+                // providers: [LoggingService]
             }]
     }], null, null); })();
 
